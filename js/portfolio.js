@@ -9,7 +9,7 @@
     'use strict';
 
     // ============================================
-    // SVG PLACEHOLDER GENERATOR
+    // SVG PLACEHOLDER GENERATOR (محسّن للأمان)
     // ============================================
     function generateSVGPlaceholder(title, category, icon) {
         // ألوان كل تصنيف
@@ -22,7 +22,6 @@
             'packaging': '8B5CF6'
         };
         
-        // أسماء التصنيفات بالعربية
         const categoryLabels = {
             'branding': 'الهوية البصرية',
             'logos': 'الشعارات',
@@ -35,12 +34,40 @@
         const color = colors[category] || '6C3CE1';
         const categoryLabel = categoryLabels[category] || category;
         
-        // SVG مع تدرج لوني وأيقونة
-        return `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23${color};stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23${color}66;stop-opacity:1' /%3E%3C/linearGradient%3E%3ClinearGradient id='g2' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23${color};stop-opacity:0.3' /%3E%3Cstop offset='100%25' style='stop-color:%23${color}22;stop-opacity:0.1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='400' fill='%231A1A2E' /%3E%3Ccircle cx='80' cy='80' r='150' fill='url(%23g2)' /%3E%3Ccircle cx='520' cy='320' r='120' fill='url(%23g2)' /%3E%3Ccircle cx='300' cy='160' r='85' fill='url(%23g1)' opacity='0.12' /%3E%3Cg transform='translate(300, 150)'%3E%3Crect x='-50' y='-50' width='100' height='100' rx='20' fill='url(%23g1)' opacity='0.9' /%3E%3Ctext x='0' y='8' font-family='Arial, sans-serif' font-size='44' text-anchor='middle' dominant-baseline='middle'%3E${icon}%3C/text%3E%3C/g%3E%3Ctext x='300' y='250' font-family='Cairo, Arial, sans-serif' font-size='22' font-weight='700' fill='%23FFFFFF' text-anchor='middle'%3E${title}%3C/text%3E%3Ctext x='300' y='282' font-family='Cairo, Arial, sans-serif' font-size='14' fill='rgba(255,255,255,0.5)' text-anchor='middle'%3E${categoryLabel}%3C/text%3E%3Cline x1='180' y1='305' x2='420' y2='305' stroke='rgba(255,255,255,0.06)' stroke-width='1' /%3E%3Crect x='235' y='320' width='130' height='30' rx='15' fill='rgba(255,255,255,0.06)' stroke='rgba(255,255,255,0.08)' stroke-width='1' /%3E%3Ctext x='300' y='340' font-family='Cairo, Arial, sans-serif' font-size='12' font-weight='600' fill='%23${color}' text-anchor='middle'%3E${categoryLabel}%3C/text%3E%3Ctext x='30' y='385' font-family='Arial, sans-serif' font-size='11' fill='rgba(255,255,255,0.08)' text-anchor='start'%3E© CyberPath Digital%3C/text%3E%3C/svg%3E`;
+        // SVG آمن باستخدام encodeURIComponent
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+            <defs>
+                <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#${color};stop-opacity:1" />
+                    <stop offset="100%" style="stop-color:#${color}66;stop-opacity:1" />
+                </linearGradient>
+                <linearGradient id="g2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#${color};stop-opacity:0.3" />
+                    <stop offset="100%" style="stop-color:#${color}22;stop-opacity:0.1" />
+                </linearGradient>
+            </defs>
+            <rect width="600" height="400" fill="#1A1A2E" />
+            <circle cx="80" cy="80" r="150" fill="url(#g2)" />
+            <circle cx="520" cy="320" r="120" fill="url(#g2)" />
+            <circle cx="300" cy="160" r="85" fill="url(#g1)" opacity="0.12" />
+            <g transform="translate(300, 150)">
+                <rect x="-50" y="-50" width="100" height="100" rx="20" fill="url(#g1)" opacity="0.9" />
+                <text x="0" y="8" font-family="Arial, sans-serif" font-size="44" text-anchor="middle" dominant-baseline="middle">${icon || '🎨'}</text>
+            </g>
+            <text x="300" y="250" font-family="Cairo, Arial, sans-serif" font-size="22" font-weight="700" fill="#FFFFFF" text-anchor="middle">${title}</text>
+            <text x="300" y="282" font-family="Cairo, Arial, sans-serif" font-size="14" fill="rgba(255,255,255,0.5)" text-anchor="middle">${categoryLabel}</text>
+            <line x1="180" y1="305" x2="420" y2="305" stroke="rgba(255,255,255,0.06)" stroke-width="1" />
+            <rect x="235" y="320" width="130" height="30" rx="15" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.08)" stroke-width="1" />
+            <text x="300" y="340" font-family="Cairo, Arial, sans-serif" font-size="12" font-weight="600" fill="#${color}" text-anchor="middle">${categoryLabel}</text>
+            <text x="30" y="385" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.08)" text-anchor="start">© CyberPath Digital</text>
+        </svg>`;
+        
+        // تحويل SVG إلى Data URI آمن
+        return 'data:image/svg+xml,' + encodeURIComponent(svg);
     }
 
     // ============================================
-    // PORTFOLIO DATA WITH SVG PLACEHOLDERS
+    // PORTFOLIO DATA
     // ============================================
     const portfolioData = [
         {
@@ -257,12 +284,14 @@
     // GET IMAGE SOURCE (with fallback to SVG placeholder)
     // ============================================
     function getImageSource(item) {
-        // التحقق من وجود الصورة - استخدام SVG placeholder كبديل
+        // توليد SVG placeholder كاحتياطي
+        const placeholder = generateSVGPlaceholder(item.title, item.category, item.icon || '🎨');
+        
+        // إذا كان هناك مسار صورة، استخدمه، وإلا استخدم placeholder
         if (item.image && item.image !== '') {
             return item.image;
         }
-        // إنشاء SVG placeholder باستخدام البيانات المتوفرة
-        return generateSVGPlaceholder(item.title, item.category, item.icon || '🎨');
+        return placeholder;
     }
 
     // ============================================
@@ -295,11 +324,13 @@
             div.setAttribute('data-category', item.category);
             div.setAttribute('data-index', index);
             
-            // استخدام SVG placeholder إذا كانت الصورة غير متوفرة
+            // الحصول على مصدر الصورة مع fallback
             const imgSrc = getImageSource(item);
+            const placeholder = generateSVGPlaceholder(item.title, item.category, item.icon || '🎨');
             
             div.innerHTML = `
-                <img src="${imgSrc}" alt="${item.title}" loading="lazy" onerror="this.src='${generateSVGPlaceholder(item.title, item.category, item.icon || '🎨')}'" />
+                <img src="${imgSrc}" alt="${item.title}" loading="lazy" 
+                     onerror="this.onerror=null; this.src='${placeholder}'" />
                 <div class="portfolio-info">
                     <span class="category">${getCategoryLabel(item.category)}</span>
                     <h4>${item.title}</h4>
@@ -359,11 +390,16 @@
         
         if (!item) return;
         
-        // استخدام SVG placeholder في الـ Lightbox أيضاً
         const imgSrc = getImageSource(item);
+        const placeholder = generateSVGPlaceholder(item.title, item.category, item.icon || '🎨');
         
         lightboxImg.src = imgSrc;
         lightboxImg.alt = item.title;
+        lightboxImg.onerror = function() {
+            this.onerror = null;
+            this.src = placeholder;
+        };
+        
         lightboxCaption.innerHTML = `
             <h4>${item.title}</h4>
             <p>${item.description}</p>
@@ -373,7 +409,6 @@
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
         
-        // Update navigation buttons
         updateLightboxNav();
     }
 
@@ -420,7 +455,6 @@
     // EVENT LISTENERS
     // ============================================
     
-    // Filter buttons
     filterButtons.forEach(function(btn) {
         btn.addEventListener('click', function() {
             const filter = this.dataset.filter;
@@ -428,7 +462,6 @@
         });
     });
     
-    // Lightbox controls
     if (lightboxClose) {
         lightboxClose.addEventListener('click', closeLightbox);
     }
@@ -455,7 +488,6 @@
         });
     }
     
-    // Keyboard support
     document.addEventListener('keydown', function(e) {
         if (!lightbox || !lightbox.classList.contains('active')) return;
         
@@ -475,25 +507,6 @@
     });
 
     // ============================================
-    // HANDLE IMAGE LOADING ERRORS (Global)
-    // ============================================
-    // إضافة معالج للأخطاء في حالة فشل تحميل الصور
-    document.addEventListener('error', function(e) {
-        const target = e.target;
-        if (target.tagName === 'IMG') {
-            // محاولة العثور على بيانات المشروع من السمة data-*
-            const parent = target.closest('.portfolio-item');
-            if (parent) {
-                const index = parseInt(parent.dataset.index);
-                if (!isNaN(index) && currentItems[index]) {
-                    const item = currentItems[index];
-                    target.src = generateSVGPlaceholder(item.title, item.category, item.icon || '🎨');
-                }
-            }
-        }
-    }, true);
-
-    // ============================================
     // INIT
     // ============================================
     renderPortfolio('all');
@@ -506,8 +519,7 @@
         setFilter: setFilter,
         openLightbox: openLightbox,
         closeLightbox: closeLightbox,
-        generateSVGPlaceholder: generateSVGPlaceholder,
-        getImageSource: getImageSource
+        generateSVGPlaceholder: generateSVGPlaceholder
     };
 
 })();
