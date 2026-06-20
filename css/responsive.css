@@ -1,0 +1,216 @@
+/* ============================================
+   CYBERPATH DIGITAL - RESPONSIVE.CSS
+   تحسينات إضافية للتجاوب مع جميع الشاشات
+   ============================================ */
+
+/* ===== EXTRA SMALL DEVICES (PORTRAIT PHONES) ===== */
+@media (max-width: 380px) {
+    .hero-title {
+        font-size: 1.8rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .service-card {
+        padding: 24px 16px;
+    }
+    
+    .tools-grid {
+        gap: 10px;
+    }
+    
+    .tool-item {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+    
+    .why-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .workflow-steps {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .testimonials-slider {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===== SMALL DEVICES (PHONES) ===== */
+@media (min-width: 381px) and (max-width: 576px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .case-studies-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .mockups-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .cta-content {
+        padding: 28px 16px;
+    }
+}
+
+/* ===== MEDIUM DEVICES (TABLETS) ===== */
+@media (min-width: 577px) and (max-width: 768px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .case-studies-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .mockups-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* ===== LARGE DEVICES (DESKTOPS) ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .case-studies-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .mockups-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+}
+
+/* ===== EXTRA LARGE DEVICES ===== */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===== LANDSCAPE ORIENTATION ===== */
+@media (max-height: 600px) and (orientation: landscape) {
+    .hero {
+        min-height: auto;
+        padding: 80px 0 40px;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-stats {
+        margin-top: 24px;
+        padding-top: 16px;
+    }
+    
+    .hero-description {
+        margin: 8px 0 16px;
+    }
+}
+
+/* ===== PRINT STYLES ===== */
+@media print {
+    .header {
+        position: static;
+        background: white !important;
+    }
+    
+    .hero-shape {
+        display: none;
+    }
+    
+    .btn {
+        border: 1px solid #000;
+        background: white !important;
+        color: #000 !important;
+    }
+    
+    .glass-card {
+        background: white !important;
+        border: 1px solid #ddd !important;
+    }
+    
+    section {
+        padding: 30px 0;
+        page-break-inside: avoid;
+    }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
