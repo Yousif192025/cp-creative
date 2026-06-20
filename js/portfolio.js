@@ -338,4 +338,87 @@
         
         filterButtons.forEach(function(btn) {
             btn.classList.remove('active');
-            btn.setAttribute('aria-selected', 'false
+            btn.setAttribute('aria-selected', 'false');
+            if (btn.dataset.filter === filter) {
+                btn.classList.add('active');
+                btn.setAttribute('aria-selected', 'true');
+            }
+        });
+        
+        renderPortfolio(filter);
+    }
+
+    // ============================================
+    // EVENT LISTENERS
+    // ============================================
+    
+    // Filter buttons
+    filterButtons.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            const filter = this.dataset.filter;
+            setFilter(filter);
+        });
+    });
+    
+    // Lightbox controls
+    if (lightboxClose) {
+        lightboxClose.addEventListener('click', closeLightbox);
+    }
+    
+    if (lightbox) {
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+    }
+    
+    if (lightboxPrev) {
+        lightboxPrev.addEventListener('click', function(e) {
+            e.stopPropagation();
+            navigateLightbox(-1);
+        });
+    }
+    
+    if (lightboxNext) {
+        lightboxNext.addEventListener('click', function(e) {
+            e.stopPropagation();
+            navigateLightbox(1);
+        });
+    }
+    
+    // Keyboard support
+    document.addEventListener('keydown', function(e) {
+        if (!lightbox || !lightbox.classList.contains('active')) return;
+        
+        switch(e.key) {
+            case 'Escape':
+                closeLightbox();
+                break;
+            case 'ArrowLeft':
+                e.preventDefault();
+                navigateLightbox(-1);
+                break;
+            case 'ArrowRight':
+                e.preventDefault();
+                navigateLightbox(1);
+                break;
+        }
+    });
+
+    // ============================================
+    // INIT
+    // ============================================
+    renderPortfolio('all');
+
+    // ============================================
+    // EXPOSE FUNCTIONS
+    // ============================================
+    window.Portfolio = {
+        render: renderPortfolio,
+        setFilter: setFilter,
+        openLightbox: openLightbox,
+        closeLightbox: closeLightbox
+    };
+
+})();
