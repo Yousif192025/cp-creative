@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دراسة حالة - بروشور شركة عقارية | CyberPath Digital</title>
+    <meta name="description" content="دراسة حالة متكاملة حول تصميم بروشور احترافي لشركة عقارية كبرى، وكيف ساهم في تعزيز المبيعات وجذب العملاء." />
+    <link rel="canonical" href="https://cyberpath-digital.com/creative-design-branding/case-studies/brochure-project-1.html" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="دراسة حالة - بروشور شركة عقارية | CyberPath Digital" />
+    <meta property="og:description" content="كيف ساعدنا شركة عقارية في تصميم بروشور احترافي ساهم في زيادة المبيعات بنسبة 75% وجذب عملاء جدد." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://cyberpath-digital.com/creative-design-branding/case-studies/brochure-project-1.html" />
+    <meta property="og:image" content="https://cyberpath-digital.com/creative-design-branding/assets/images/case-studies/brochure-project-1.jpg" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="بروشور شركة عقارية - دراسة حالة" />
+    <meta name="twitter:description" content="كيف ساعدنا شركة عقارية في تصميم بروشور احترافي ساهم في زيادة المبيعات بنسبة 75%." />
+    
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+    
+    <style>
+        /* أنماط خاصة بصفحات دراسات الحالة */
+        .case-hero {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .case-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(108, 60, 225, 0.15) 0%, rgba(236, 72, 153, 0.05) 100%);
+            z-index: 0;
+        }
+        
+        .case-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .case-badge {
+            display: inline-block;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: rgba(108, 60, 225, 0.15);
+            color: var(--color-primary-light);
+            border: 1px solid rgba(108, 60, 225, 0.2);
+            margin-bottom: 16px;
+        }
+        
+        .case-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 32px 0;
+            padding: 24px;
+            background: var(--glass-bg);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--glass-border);
+        }
+        
+        .case-meta-item {
+            text-align: center;
+        }
+        
+        .case-meta-item .label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--color-gray-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        
+        .case-meta-item .value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-white);
+        }
+        
+        .case-section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--glass-border);
+        }
+        
+        .case-section:last-of-type {
+            border-bottom: none;
+        }
+        
+        .case-section-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .case-section-title .number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            font-size: 0.9rem;
+            font-weight: 800;
+            color: var(--color-white);
+            flex-shrink: 0;
+        }
+        
+        .case-section-content {
+            color: var(--color-gray-light);
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+        
+        .case-section-content strong {
+            color: var(--color-white);
+        }
+        
+        .result-highlight {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 24px 0;
+            text-align: center;
+        }
+        
+        .result-highlight .number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+        }
+        
+        .result-highlight .label {
+            font-size: 1rem;
+            color: var(--color-gray-light);
+        }
+        
+        .brochure-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 24px 0;
+        }
+        
+        .brochure-feature {
+            padding: 24px;
+            background: var(--glass-bg);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--glass-border);
+            text-align: center;
+            transition: var(--transition-medium);
+        }
+        
+        .brochure-feature:hover {
+            transform: translateY(-4px);
+            border-color: var(--color-primary);
+        }
+        
+        .brochure-feature .icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+        
+        .brochure-feature h4 {
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+        
+        .brochure-feature p {
+            color: var(--color-gray-light);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin: 24px 0;
+        }
+        
+        .before-after .card {
+            padding: 24px;
+            background: var(--glass-bg);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--glass-border);
+            text-align: center;
+        }
+        
+        .before-after .card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+        
+        .before-after .card.before .icon {
+            color: #EF4444;
+        }
+        
+        .before-after .card.after .icon {
+            color: #10B981;
+        }
+        
+        .before-after .card h4 {
+            margin-bottom: 8px;
+        }
+        
+        .before-after .card ul {
+            text-align: right;
+            color: var(--color-gray-light);
+            font-size: 0.95rem;
+            padding: 0;
+            list-style: none;
+        }
+        
+        .before-after .card ul li {
+            padding: 4px 0;
+        }
+        
+        .testimonial-box {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 24px 0;
+            position: relative;
+        }
+        
+        .testimonial-box .quote-icon {
+            font-size: 2.5rem;
+            color: var(--color-primary-light);
+            opacity: 0.3;
+            margin-bottom: 12px;
+            display: block;
+        }
+        
+        .testimonial-box blockquote {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--color-gray-light);
+            font-style: italic;
+        }
+        
+        .testimonial-box .author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-top: 16px;
+        }
+        
+        .testimonial-box .author .avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+        
+        .testimonial-box .author .name {
+            font-weight: 600;
+            color: var(--color-white);
+        }
+        
+        .testimonial-box .author .role {
+            font-size: 0.85rem;
+            color: var(--color-gray-light);
+        }
+        
+        .related-projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 24px;
+        }
+        
+        .related-project {
+            padding: 20px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-md);
+            transition: var(--transition-medium);
+            text-align: center;
+        }
+        
+        .related-project:hover {
+            transform: translateY(-4px);
+            border-color: var(--color-primary);
+        }
+        
+        .related-project .icon {
+            font-size: 2rem;
+            color: var(--color-primary-light);
+            margin-bottom: 12px;
+            display: block;
+        }
+        
+        .related-project h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+        
+        .related-project p {
+            color: var(--color-gray-light);
+            font-size: 0.85rem;
+        }
+        
+        .related-project .link {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--color-primary-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition-fast);
+        }
+        
+        .related-project .link:hover {
+            color: var(--color-white);
+        }
+        
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-gray-light);
+            font-weight: 600;
+            transition: var(--transition-fast);
+            margin-bottom: 24px;
+        }
+        
+        .back-link:hover {
+            color: var(--color-white);
+            gap: 12px;
+        }
+        
+        .design-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+        
+        .design-gallery .item {
+            aspect-ratio: 3/4;
+            background: var(--color-dark-card);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gray-light);
+            font-size: 0.9rem;
+            gap: 8px;
+            transition: var(--transition-medium);
+        }
+        
+        .design-gallery .item:hover {
+            border-color: var(--color-primary);
+            transform: scale(1.02);
+        }
+        
+        .design-gallery .item i {
+            font-size: 2.5rem;
+            color: var(--color-primary-light);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+            
+            .case-meta-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .case-section-title {
+                font-size: 1.3rem;
+            }
+            
+            .case-section-title .number {
+                width: 32px;
+                height: 32px;
+                font-size: 0.8rem;
+            }
+            
+            .brochure-features {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .case-meta-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .result-highlight .number {
+                font-size: 2.2rem;
+            }
+            
+            .testimonial-box {
+                padding: 20px;
+            }
+            
+            .brochure-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .design-gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" role="banner">
+        <nav class="navbar container" role="navigation" aria-label="القائمة الرئيسية">
+            <div class="logo">
+                <a href="../index.html">
+                    <span class="logo-icon">⚡</span>
+                    CyberPath <span class="logo-accent">Digital</span>
+                </a>
+            </div>
+            
+            <button class="nav-toggle" aria-label="فتح القائمة" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+            
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="../index.html" role="menuitem">الرئيسية</a></li>
+                <li role="none"><a href="../services.html" role="menuitem">الخدمات</a></li>
+                <li role="none"><a href="../portfolio.html" role="menuitem">أعمالنا</a></li>
+                <li role="none"><a href="../about.html" role="menuitem">عن الشركة</a></li>
+                <li role="none"><a href="../contact.html" role="menuitem" class="nav-cta">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+        <!-- ===== CASE HERO ===== -->
+        <section class="case-hero" style="padding:140px 0 60px;background:var(--bg-secondary);">
+            <div class="container">
+                <a href="../case-studies.html" class="back-link">
+                    <i class="fas fa-arrow-right"></i> العودة إلى دراسات الحالة
+                </a>
+                
+                <span class="case-badge">
+                    <i class="fas fa-book"></i> بروشورات
+                </span>
+                
+                <h1 class="section-title" style="font-size:clamp(2rem, 4vw, 3rem);">
+                    بروشور شركة عقارية كبرى
+                </h1>
+                
+                <p style="color:var(--color-gray-light);font-size:1.2rem;max-width:700px;margin-top:12px;">
+                    كيف ساعدنا شركة عقارية في تصميم بروشور احترافي ساهم في زيادة المبيعات بنسبة <strong style="color:var(--color-white);">75%</strong> وجذب عملاء جدد
+                </p>
+                
+                <div class="case-meta-grid">
+                    <div class="case-meta-item">
+                        <span class="label">العميل</span>
+                        <span class="value">شركة عقارية كبرى</span>
+                    </div>
+                    <div class="case-meta-item">
+                        <span class="label">الخدمة</span>
+                        <span class="value">تصميم البروشورات</span>
+                    </div>
+                    <div class="case-meta-item">
+                        <span class="label">المدة</span>
+                        <span class="value">3 أسابيع</span>
+                    </div>
+                    <div class="case-meta-item">
+                        <span class="label">النتيجة</span>
+                        <span class="value" style="color:#10B981;">+75% مبيعات</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 1: CLIENT OVERVIEW ===== -->
+        <section class="case-section">
+            <div class="container">
+                <h2 class="case-section-title">
+                    <span class="number">01</span>
+                    نظرة عامة على العميل
+                </h2>
+                
+                <div class="case-section-content">
+                    <p>
+                        <strong>شركة عقارية رائدة</strong> في المملكة العربية السعودية، متخصصة في تطوير المشاريع السكنية والتجارية الفاخرة. 
+                        كانت الشركة تمتلك سمعة قوية في السوق، ولكنها كانت بحاجة إلى <strong>بروشور احترافي</strong> يعكس جودة مشاريعها 
+                        ويجذب شريحة أوسع من العملاء المحتملين.
+                    </p>
+                    
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px;">
+                        <div style="background:var(--glass-bg);padding:20px;border-radius:var(--radius-md);border:1px solid var(--glass-border);">
+                            <h4 style="color:var(--color-primary-light);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.5px;">التحدي الرئيسي</h4>
+                            <p style="color:var(--color-gray-light);margin-top:8px;">المواد التسويقية الحالية لم تكن تعكس جودة المشاريع بشكل مناسب</p>
+                        </div>
+                        <div style="background:var(--glass-bg);padding:20px;border-radius:var(--radius-md);border:1px solid var(--glass-border);">
+                            <h4 style="color:var(--color-primary-light);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.5px;">الهدف</h4>
+                            <p style="color:var(--color-gray-light);margin-top:8px;">تصميم بروشور احترافي يعزز صورة الشركة ويزيد من استفسارات العملاء</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 2: STRATEGY ===== -->
+        <section class="case-section">
+            <div class="container">
+                <h2 class="case-section-title">
+                    <span class="number">02</span>
+                    الاستراتيجية
+                </h2>
+                
+                <div class="case-section-content">
+                    <p>
+                        قمنا بتطوير <strong>استراتيجية تصميم شاملة</strong> للبروشور، تركز على:
+                    </p>
+                    
+                    <div class="brochure-features">
+                        <div class="brochure-feature">
+                            <span class="icon">🎯</span>
+                            <h4>استهداف دقيق</h4>
+                            <p>تصميم موجه للفئة المستهدفة من العملاء</p>
+                        </div>
+                        <div class="brochure-feature">
+                            <span class="icon">🎨</span>
+                            <h4>هوية بصرية</h4>
+                            <p>توافق مع هوية الشركة وعلامتها التجارية</p>
+                        </div>
+                        <div class="brochure-feature">
+                            <span class="icon">📐</span>
+                            <h4>تصميم احترافي</h4>
+                            <p>تخطيط متقن للصفحات مع صور عالية الجودة</p>
+                        </div>
+                        <div class="brochure-feature">
+                            <span class="icon">📝</span>
+                            <h4>محتوى مؤثر</h4>
+                            <p>نصوص تسويقية جذابة تعكس قيمة المشاريع</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 3: DESIGN PROCESS ===== -->
+        <section class="case-section">
+            <div class="container">
+                <h2 class="case-section-title">
+                    <span class="number">03</span>
+                    عملية التصميم
+                </h2>
+                
+                <div class="case-section-content">
+                    <p>
+                        اتبعنا <strong>عملية تصميم منظمة</strong> لضمان الحصول على أفضل نتيجة ممكنة:
+                    </p>
+                    
+                    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin-top:20px;">
+                        <div style="background:var(--glass-bg);padding:16px;border-radius:var(--radius-md);border:1px solid var(--glass-border);text-align:center;">
+                            <div style="font-size:2rem;margin-bottom:8px;">🔍</div>
+                            <h4 style="font-size:0.95rem;">البحث والتحليل</h4>
+                            <p style="color:var(--color-gray-light);font-size:0.85rem;margin:0;">دراسة السوق والمنافسين</p>
+                        </div>
+                        <div style="background:var(--glass-bg);padding:16px;border-radius:var(--radius-md);border:1px solid var(--glass-border);text-align:center;">
+                            <div style="font-size:2rem;margin-bottom:8px;">✏️</div>
+                            <h4 style="font-size:0.95rem;">التخطيط</h4>
+                            <p style="color:var(--color-gray-light);font-size:0.85rem;margin:0;">هيكلة المحتوى وتوزيع الصفحات</p>
+                        </div>
+                        <div style="background:var(--glass-bg);padding:16px;border-radius:var(--radius-md);border:1px solid var(--glass-border);text-align:center;">
+                            <div style="font-size:2rem;margin-bottom:8px;">🎨</div>
+                            <h4 style="font-size:0.95rem;">التصميم</h4>
+                            <p style="color:var(--color-gray-light);font-size:0.85rem;margin:0;">تصميم الصفحات الداخلية والخارجية</p>
+                        </div>
+                        <div style="background:var(--glass-bg);padding:16px;border-radius:var(--radius-md);border:1px solid var(--glass-border);text-align:center;">
+                            <div style="font-size:2rem;margin-bottom:8px;">🔄</div>
+                            <h4 style="font-size:0.95rem;">المراجعة</h4>
+                            <p style="color:var(--color-gray-light);font-size:0.85rem;margin:0;">تعديلات وتحسينات حسب ملاحظات العميل</p>
+                        </div>
+                        <div style="background:var(--glass-bg);padding:16px;border-radius:var(--radius-md);border:1px solid var(--glass-border);text-align:center;">
+                            <div style="font-size:2rem;margin-bottom:8px;">✅</div>
+                            <h4 style="font-size:0.95rem;">التسليم</h4>
+                            <p style="color:var(--color-gray-light);font-size:0.85rem;margin:0;">ملفات جاهزة للطباعة والاستخدام</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 4: BROCHURE FEATURES ===== -->
+        <section class="case-section">
+            <div class="container">
+                <h2 class="case-section-title">
+                    <span class="number">04</span>
+                    مميزات البروشور
+                </h2>
+                
+                <div class="case-section-content">
+                    <p>
+                        تم تصميم البروشور ليشمل <strong>عناصر مميزة</strong> جعلته أداة تسويقية فعالة:
+                    </p>
+                    
+                    <div class="design-gallery">
+                        <div class="item">
+                            <i class="fas fa-image"></i>
+                            <span>صور عالية الجودة</span>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-palette"></i>
+                            <span>نظام ألوان مميز</span>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-font"></i>
+                            <span>خطوط احترافية</span>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-layer-group"></i>
+                            <span>تخطيط متقن</span>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-chart-simple"></i>
+                            <span>رسوم بيانية توضيحية</span>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-phone"></i>
+                            <span>معلومات تواصل واضحة</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top:20px;padding:20px;background:var(--glass-bg);border-radius:var(--radius-md);border:1px solid var(--glass-border);">
+                        <h4 style="color:var(--color-white);margin-bottom:8px;">📋 مواصفات البروشور</h4>
+                        <ul style="color:var(--color-gray-light);font-size:0.95rem;padding:0;list-style:none;">
+                            <li style="padding:4px 0;border-bottom:1px solid var(--glass-border);">• عدد الصفحات: 16 صفحة</li>
+                            <li style="padding:4px 0;border-bottom:1px solid var(--glass-border);">• المقاس: 21 × 29.7 سم (A4)</li>
+                            <li style="padding:4px 0;border-bottom:1px solid var(--glass-border);">• نوع الورق: فاخر مطلي</li>
+                            <li style="padding:4px 0;">• الطباعة: أربع ألوان (CMYK)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 5: BEFORE & AFTER ===== -->
+        <section class="case-section">
+            <div class="container">
+                <h2 class="case-section-title">
+                    <span class="number">05</span>
+                    قبل وبعد
+                </h2>
+                
+                <div class="case-section-content">
+                    <p>المقارنة بين المواد التسويقية السابقة والبروشور الجديد:</p>
+                    
+                    <div class="before-after">
+                        <div class="card before">
+                            <span class="icon">📄</span>
+                            <h4 style="color:#EF4444;">قبل التصميم الجديد</h4>
+                            <ul>
+                                <li>• تصميم بسيط وغير احترافي</li>
+                                <li>• صور منخفضة الجودة</li>
+                                <li>• تنظيم ضعيف للمحتوى</li>
+                                <li>• لا يعكس قيمة المشاريع</li>
+                            </ul>
+                        </div>
+                        <div class="card after">
+                            <span class="icon">📘</span>
+                            <h4 style="color:#10B981;">بعد التصميم الجديد</h4>
+                            <ul>
+                                <li>• تصميم عصري واحترافي</li>
+                                <li>• صور عالية الدقة</li>
+                                <li>• تنظيم متقن للمحتوى</li>
+                                <li>• يعزز صورة الشركة ويثير الاهتمام</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 6: RESULTS ===== -->
+        <section class="case-section">
+            <div class="container">
+                <h2 class="case-section-title">
+                    <span class="number">06</span>
+                    النتائج والتأثير
+                </h2>
+                
+                <div class="case-section-content">
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;">
+                        <div class="result-highlight">
+                            <span class="number">75%</span>
+                            <span class="label">زيادة في المبيعات</span>
+                        </div>
+                        <div class="result-highlight">
+                            <span class="number">120%</span>
+                            <span class="label">نمو في الاستفسارات</span>
+                        </div>
+                        <div class="result-highlight">
+                            <span class="number">85%</span>
+                            <span class="label">تحسن في صورة العلامة</span>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top:24px;padding:24px;background:var(--glass-bg);border-radius:var(--radius-md);border:1px solid var(--glass-border);">
+                        <h4 style="color:var(--color-white);margin-bottom:8px;">📊 أبرز الإنجازات</h4>
+                        <ul style="color:var(--color-gray-light);font-size:1rem;padding:0;list-style:none;">
+                            <li style="padding:6px 0;border-bottom:1px solid var(--glass-border);">
+                                ✅ زيادة المبيعات العقارية بنسبة 75% خلال 3 أشهر من توزيع البروشور
+                            </li>
+                            <li style="padding:6px 0;border-bottom:1px solid var(--glass-border);">
+                                ✅ ارتفاع عدد الاستفسارات بنسبة 120% من العملاء المحتملين
+                            </li>
+                            <li style="padding:6px 0;border-bottom:1px solid var(--glass-border);">
+                                ✅ تحسن صورة العلامة التجارية بنسبة 85% حسب استبيان العملاء
+                            </li>
+                            <li style="padding:6px 0;">
+                                ✅ استخدام البروشور كأداة تسويقية رئيسية في المعارض العقارية
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 7: CLIENT TESTIMONIAL ===== -->
+        <section class="case-section">
+            <div class="container">
+                <h2 class="case-section-title">
+                    <span class="number">07</span>
+                    شهادة العميل
+                </h2>
+                
+                <div class="testimonial-box">
+                    <span class="quote-icon"><i class="fas fa-quote-right"></i></span>
+                    <blockquote>
+                        "كان البروشور الذي صممه فريق CyberPath Digital نقلة نوعية في استراتيجيتنا التسويقية. 
+                        التصميم الاحترافي والجودة العالية ساهمت بشكل مباشر في زيادة ثقة العملاء وارتفاع المبيعات. 
+                        نوصي بشدة بخدماتهم لأي شركة تسعى للتميز."
+                    </blockquote>
+                    <div class="author">
+                        <div class="avatar">أ</div>
+                        <div>
+                            <div class="name">أحمد السعدون</div>
+                            <div class="role">مدير التسويق - شركة عقارية كبرى</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 8: RELATED PROJECTS ===== -->
+        <section class="case-section" style="border-bottom:none;padding-bottom:40px;">
+            <div class="container">
+                <h2 class="case-section-title">
+                    <span class="number">08</span>
+                    مشاريع ذات صلة
+                </h2>
+                
+                <div class="related-projects">
+                    <a href="branding-project-1.html" class="related-project">
+                        <span class="icon"><i class="fas fa-pen-fancy"></i></span>
+                        <h4>إعادة تصميم هوية شركة تقنية</h4>
+                        <p>هوية بصرية متكاملة لشركة ناشئة</p>
+                        <span class="link">اقرأ الدراسة →</span>
+                    </a>
+                    <a href="social-campaign-1.html" class="related-project">
+                        <span class="icon"><i class="fas fa-bullhorn"></i></span>
+                        <h4>حملة إعلانية لعلامة تجارية أزياء</h4>
+                        <p>زيادة المبيعات بنسبة 150%</p>
+                        <span class="link">اقرأ الدراسة →</span>
+                    </a>
+                    <a href="magazine-project-1.html" class="related-project">
+                        <span class="icon"><i class="fas fa-newspaper"></i></span>
+                        <h4>تصميم مجلة شهرية</h4>
+                        <p>تصميم متكامل لمجلة شهرية</p>
+                        <span class="link">اقرأ الدراسة →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA SECTION ===== -->
+        <section style="padding:40px 0 80px;">
+            <div class="container">
+                <div class="cta-content glass-card" style="padding:48px 32px;text-align:center;">
+                    <h2 style="font-size:clamp(1.5rem, 3vw, 2.2rem);">هل تحتاج إلى بروشور احترافي؟</h2>
+                    <p style="color:var(--color-gray-light);font-size:1.1rem;margin:12px 0 24px;">
+                        دعنا نساعدك في تصميم مواد تسويقية تعكس هوية علامتك التجارية وتعزز مبيعاتك
+                    </p>
+                    <a href="../contact.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-comment"></i> احصل على استشارة مجانية
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">⚡</span>
+                        CyberPath <span class="logo-accent">Digital</span>
+                    </div>
+                    <p>نقدم حلولاً إبداعية في التصميم والهوية البصرية، نساعد العلامات التجارية على التميز والنمو.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="لينكدإن"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="../branding.html">الهوية البصرية</a></li>
+                        <li><a href="../branding.html">تصميم الشعارات</a></li>
+                        <li><a href="../advertising.html">الإعلانات</a></li>
+                        <li><a href="../social-media-design.html">وسائل التواصل</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="../about.html">عن الشركة</a></li>
+                        <li><a href="../portfolio.html">أعمالنا</a></li>
+                        <li><a href="../case-studies.html">دراسات الحالة</a></li>
+                        <li><a href="../contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4>تواصل معنا</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+966561428260">+966 561428260</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@cyberpath.com">info@cyberpath.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 CyberPath Digital. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../js/main.js"></script>
+    
+    <!-- ===== JSON-LD SCHEMA ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "بروشور شركة عقارية كبرى - دراسة حالة",
+        "description": "كيف ساعدنا شركة عقارية في تصميم بروشور احترافي ساهم في زيادة المبيعات بنسبة 75% وجذب عملاء جدد.",
+        "author": {
+            "@type": "Organization",
+            "name": "CyberPath Digital"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "CyberPath Digital"
+        },
+        "datePublished": "2026-06-20",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://cyberpath-digital.com/creative-design-branding/case-studies/brochure-project-1.html"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "الرئيسية",
+                "item": "https://cyberpath-digital.com/creative-design-branding/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "دراسات الحالة",
+                "item": "https://cyberpath-digital.com/creative-design-branding/case-studies.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "بروشور شركة عقارية"
+            }
+        ]
+    }
+    </script>
+</body>
+</html>
