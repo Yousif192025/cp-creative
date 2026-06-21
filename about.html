@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -5,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>عن CyberPath Digital | وكالة التصميم الإبداعي</title>
     <meta name="description" content="تعرف على CyberPath Digital، وكالة إبداعية متخصصة في التصميم والهوية البصرية." />
-    <link rel="canonical" href="https://cyberpath-digital.com/creative-design-branding/about.html" />
+    <link rel="canonical" href="https://cp-creative.vercel.app/about.html" />
     
     <meta property="og:title" content="عن CyberPath Digital | وكالة التصميم الإبداعي" />
     <meta property="og:description" content="تعرف على CyberPath Digital، وكالة إبداعية متخصصة في التصميم والهوية البصرية." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://cyberpath-digital.com/creative-design-branding/about.html" />
+    <meta property="og:url" content="https://cp-creative.vercel.app/about.html" />
+    <meta property="og:image" content="https://cp-creative.vercel.app/assets/images/og-default.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="عن CyberPath Digital | وكالة التصميم الإبداعي" />
@@ -22,6 +26,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
 </head>
 <body>
     <header class="header" role="banner">
@@ -146,7 +152,7 @@
                 <div class="footer-contact">
                     <h4>تواصل معنا</h4>
                     <ul>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+966501234567">+966 50 123 4567</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+966561428260">+966 561428260</a></li>
                         <li><i class="fas fa-envelope"></i> <a href="mailto:info@cyberpath.com">info@cyberpath.com</a></li>
                         <li><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</li>
                     </ul>
@@ -161,5 +167,28 @@
 
     <script src="js/main.js"></script>
     <script src="js/counters.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AboutPage",
+        "name": "عن الشركة | CyberPath Digital",
+        "url": "https://cp-creative.vercel.app/about.html",
+        "about": {
+            "@type": "Organization",
+            "name": "CyberPath Digital"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://cp-creative.vercel.app/" },
+            { "@type": "ListItem", "position": 2, "name": "عن الشركة" }
+        ]
+    }
+    </script>
 </body>
 </html>
