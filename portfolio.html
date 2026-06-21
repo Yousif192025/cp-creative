@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -5,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>أعمال التصميم الإبداعي | CyberPath Digital</title>
     <meta name="description" content="استعرض مجموعة من أفضل أعمالنا في التصميم الإبداعي والهوية البصرية." />
-    <link rel="canonical" href="https://cyberpath-digital.com/creative-design-branding/portfolio.html" />
+    <link rel="canonical" href="https://cp-creative.vercel.app/portfolio.html" />
     
     <!-- Open Graph -->
     <meta property="og:title" content="أعمال التصميم الإبداعي | CyberPath Digital" />
     <meta property="og:description" content="استعرض مجموعة من أفضل أعمالنا في التصميم الإبداعي والهوية البصرية." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://cyberpath-digital.com/creative-design-branding/portfolio.html" />
+    <meta property="og:url" content="https://cp-creative.vercel.app/portfolio.html" />
+    <meta property="og:image" content="https://cp-creative.vercel.app/assets/images/og-default.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -23,13 +27,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="stylesheet" href="css/portfolio.css" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
 </head>
 <body>
     <!-- ===== HEADER ===== -->
@@ -159,5 +165,25 @@
     <script src="js/lightbox.js"></script>
     <script src="js/counters.js"></script>
     <script src="js/filters.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "أعمالنا | CyberPath Digital",
+        "url": "https://cp-creative.vercel.app/portfolio.html",
+        "description": "معرض أعمالنا في الهوية البصرية والشعارات والإعلانات وتصميم وسائل التواصل."
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://cp-creative.vercel.app/" },
+            { "@type": "ListItem", "position": 2, "name": "أعمالنا" }
+        ]
+    }
+    </script>
 </body>
 </html>
