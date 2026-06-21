@@ -76,7 +76,7 @@
             category: 'branding',
             description: 'هوية بصرية متكاملة لشركة تقنية ناشئة',
             icon: '🏢',
-            image: 'assets/images/portfolio/branding-1.jpg'
+            image: 'assets/images/portfolio/branding-1.svg'
         },
         {
             id: 2,
@@ -84,7 +84,7 @@
             category: 'logos',
             description: 'شعار مميز لعلامة تجارية في مجال الأزياء',
             icon: '⭐',
-            image: 'assets/images/portfolio/logo-1.jpg'
+            image: 'assets/images/portfolio/logo-1.svg'
         },
         {
             id: 3,
@@ -92,7 +92,7 @@
             category: 'advertising',
             description: 'إعلانات رقمية مبتكرة لمنتج جديد',
             icon: '📢',
-            image: 'assets/images/portfolio/advertising-1.jpg'
+            image: 'assets/images/portfolio/advertising-1.svg'
         },
         {
             id: 4,
@@ -100,7 +100,7 @@
             category: 'social',
             description: 'محتوى بصري لمنصات التواصل الاجتماعي',
             icon: '📸',
-            image: 'assets/images/portfolio/social-1.jpg'
+            image: 'assets/images/portfolio/social-1.svg'
         },
         {
             id: 5,
@@ -108,7 +108,7 @@
             category: 'brochures',
             description: 'بروشور احترافي لشركة عقارية',
             icon: '📄',
-            image: 'assets/images/portfolio/brochure-1.jpg'
+            image: 'assets/images/portfolio/brochure-1.svg'
         },
         {
             id: 6,
@@ -116,7 +116,7 @@
             category: 'packaging',
             description: 'تغليف مبتكر لمنتجات طبيعية',
             icon: '📦',
-            image: 'assets/images/portfolio/packaging-1.jpg'
+            image: 'assets/images/portfolio/packaging-1.svg'
         },
         {
             id: 7,
@@ -124,7 +124,7 @@
             category: 'branding',
             description: 'هوية بصرية متكاملة لمطعم فاخر',
             icon: '🍽️',
-            image: 'assets/images/portfolio/branding-2.jpg'
+            image: 'assets/images/portfolio/branding-2.svg'
         },
         {
             id: 8,
@@ -132,7 +132,7 @@
             category: 'logos',
             description: 'شعار احترافي لشركة استشارية',
             icon: '💼',
-            image: 'assets/images/portfolio/logo-2.jpg'
+            image: 'assets/images/portfolio/logo-2.svg'
         },
         {
             id: 9,
@@ -140,7 +140,7 @@
             category: 'advertising',
             description: 'إعلان تلفزيوني لعلامة تجارية مشهورة',
             icon: '📺',
-            image: 'assets/images/portfolio/advertising-2.jpg'
+            image: 'assets/images/portfolio/advertising-2.svg'
         },
         {
             id: 10,
@@ -148,7 +148,7 @@
             category: 'social',
             description: 'تصاميم جذابة لحساب انستغرام',
             icon: '📱',
-            image: 'assets/images/portfolio/social-2.jpg'
+            image: 'assets/images/portfolio/social-2.svg'
         },
         {
             id: 11,
@@ -156,7 +156,7 @@
             category: 'brochures',
             description: 'بروشور سياحي لوجهة عالمية',
             icon: '✈️',
-            image: 'assets/images/portfolio/brochure-2.jpg'
+            image: 'assets/images/portfolio/brochure-2.svg'
         },
         {
             id: 12,
@@ -164,7 +164,7 @@
             category: 'packaging',
             description: 'تغليف فاخر للهدايا',
             icon: '🎁',
-            image: 'assets/images/portfolio/packaging-2.jpg'
+            image: 'assets/images/portfolio/packaging-2.svg'
         },
         {
             id: 13,
@@ -172,7 +172,7 @@
             category: 'branding',
             description: 'هوية بصرية متكاملة لعلامة تجارية',
             icon: '✨',
-            image: 'assets/images/portfolio/branding-3.jpg'
+            image: 'assets/images/portfolio/branding-3.svg'
         },
         {
             id: 14,
@@ -180,7 +180,7 @@
             category: 'logos',
             description: 'شعار مبتكر لنادي رياضي',
             icon: '⚽',
-            image: 'assets/images/portfolio/logo-3.jpg'
+            image: 'assets/images/portfolio/logo-3.svg'
         },
         {
             id: 15,
@@ -188,7 +188,7 @@
             category: 'advertising',
             description: 'إعلان مطبوع في مجلة',
             icon: '📰',
-            image: 'assets/images/portfolio/advertising-3.jpg'
+            image: 'assets/images/portfolio/advertising-3.svg'
         },
         {
             id: 16,
@@ -196,7 +196,7 @@
             category: 'social',
             description: 'تصاميم مميزة لصفحة فيسبوك',
             icon: '👍',
-            image: 'assets/images/portfolio/social-3.jpg'
+            image: 'assets/images/portfolio/social-3.svg'
         },
         {
             id: 17,
@@ -204,7 +204,7 @@
             category: 'brochures',
             description: 'بروشور تسويقي لمنتج جديد',
             icon: '📋',
-            image: 'assets/images/portfolio/brochure-3.jpg'
+            image: 'assets/images/portfolio/brochure-3.svg'
         },
         {
             id: 18,
@@ -212,7 +212,7 @@
             category: 'packaging',
             description: 'تغليف أنيق لمستحضرات تجميل',
             icon: '💄',
-            image: 'assets/images/portfolio/packaging-3.jpg'
+            image: 'assets/images/portfolio/packaging-3.svg'
         },
         {
             id: 19,
@@ -220,7 +220,7 @@
             category: 'branding',
             description: 'هوية بصرية لمتجر إلكتروني',
             icon: '🛒',
-            image: 'assets/images/portfolio/branding-4.jpg'
+            image: 'assets/images/portfolio/branding-4.svg'
         },
         {
             id: 20,
@@ -228,7 +228,7 @@
             category: 'logos',
             description: 'شعار معبر لمنظمة غير ربحية',
             icon: '🤝',
-            image: 'assets/images/portfolio/logo-4.jpg'
+            image: 'assets/images/portfolio/logo-4.svg'
         },
         {
             id: 21,
@@ -236,7 +236,7 @@
             category: 'advertising',
             description: 'لوحة إعلانية خارجية',
             icon: '🏙️',
-            image: 'assets/images/portfolio/advertising-4.jpg'
+            image: 'assets/images/portfolio/advertising-4.svg'
         },
         {
             id: 22,
@@ -244,7 +244,7 @@
             category: 'social',
             description: 'تصاميم جذابة لتغريدات تويتر',
             icon: '🐦',
-            image: 'assets/images/portfolio/social-4.jpg'
+            image: 'assets/images/portfolio/social-4.svg'
         },
         {
             id: 23,
@@ -252,7 +252,7 @@
             category: 'brochures',
             description: 'بروشور لشركة تقنية',
             icon: '💻',
-            image: 'assets/images/portfolio/brochure-4.jpg'
+            image: 'assets/images/portfolio/brochure-4.svg'
         },
         {
             id: 24,
@@ -260,7 +260,7 @@
             category: 'packaging',
             description: 'تغليف مبتكر لمنتجات غذائية',
             icon: '🍕',
-            image: 'assets/images/portfolio/packaging-4.jpg'
+            image: 'assets/images/portfolio/packaging-4.svg'
         }
     ];
 
