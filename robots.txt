@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /assets/
-Disallow: /images/
 
-Sitemap: https://cyberpath-digital.com/creative-design-branding/sitemap.xml
+Sitemap: https://cp-creative.vercel.app/sitemap.xml
