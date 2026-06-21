@@ -16,7 +16,6 @@
         initScrollReveal();
         initHeaderScroll();
         initSmoothScroll();
-        initMobileMenu();
         initContactForm();
     });
 
@@ -26,25 +25,96 @@
     function initNavigation() {
         const navToggle = document.querySelector('.nav-toggle');
         const navMenu = document.querySelector('.nav-menu');
-        
-        if (navToggle && navMenu) {
-            navToggle.addEventListener('click', function() {
-                this.classList.toggle('active');
-                navMenu.classList.toggle('active');
-                
-                const isOpen = navMenu.classList.contains('active');
-                this.setAttribute('aria-expanded', isOpen);
-            });
-            
-            // Close menu on link click
-            navMenu.querySelectorAll('a').forEach(function(link) {
-                link.addEventListener('click', function() {
-                    navToggle.classList.remove('active');
-                    navMenu.classList.remove('active');
-                    navToggle.setAttribute('aria-expanded', 'false');
-                });
-            });
+
+        if (!navToggle || !navMenu) return;
+
+        // Create the overlay/backdrop dynamically so every page gets it
+        // without needing to edit 14 HTML files individually.
+        const overlay = document.createElement('div');
+        overlay.className = 'nav-overlay';
+        overlay.setAttribute('aria-hidden', 'true');
+        document.body.appendChild(overlay);
+
+        let scrollPosition = 0;
+
+        function openMenu() {
+            navToggle.classList.add('active');
+            navMenu.classList.add('active');
+            overlay.classList.add('active');
+            navToggle.setAttribute('aria-expanded', 'true');
+
+            // Body scroll lock (position:fixed pattern - the only approach
+            // that reliably blocks background scroll/rubber-banding on iOS Safari)
+            scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+            document.body.style.top = `-${scrollPosition}px`;
+            document.body.classList.add('nav-open');
         }
+
+        function closeMenu() {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('active');
+            overlay.classList.remove('active');
+            navToggle.setAttribute('aria-expanded', 'false');
+
+            document.body.classList.remove('nav-open');
+            document.body.style.top = '';
+            window.scrollTo(0, scrollPosition);
+        }
+
+        navToggle.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isOpen = navMenu.classList.contains('active');
+            if (isOpen) {
+                closeMenu();
+            } else {
+                openMenu();
+            }
+        });
+
+        // Close when a nav link is clicked (page links and in-page anchors alike)
+        navMenu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                closeMenu();
+            });
+        });
+
+        // Close when clicking/tapping the overlay (outside the menu panel)
+        overlay.addEventListener('click', closeMenu);
+
+        // Close on outside click/tap anywhere that isn't the menu or toggle
+        document.addEventListener('click', function(e) {
+            if (!navMenu.classList.contains('active')) return;
+            if (navMenu.contains(e.target) || navToggle.contains(e.target)) return;
+            closeMenu();
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                closeMenu();
+                navToggle.focus();
+            }
+        });
+
+        // Auto-close if the viewport is resized past the desktop breakpoint
+        // while the menu happens to be open (CSS handles show/hide of the
+        // toggle itself - this only guards against a stale open state).
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768 && navMenu.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+
+        // ----------------------------------------
+        // Active page highlighting
+        // ----------------------------------------
+        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+        navMenu.querySelectorAll('a').forEach(function(link) {
+            const linkPath = link.getAttribute('href').split('/').pop();
+            if (linkPath === currentPath) {
+                link.classList.add('active');
+            }
+        });
     }
 
     // ============================================
@@ -115,27 +185,6 @@
                     });
                 }
             });
-        });
-    }
-
-    // ============================================
-    // MOBILE MENU DETECTION
-    // ============================================
-    function initMobileMenu() {
-        const navToggle = document.querySelector('.nav-toggle');
-        
-        if (window.innerWidth > 768 && navToggle) {
-            navToggle.style.display = 'none';
-        }
-        
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768 && navToggle) {
-                navToggle.style.display = 'none';
-                document.querySelector('.nav-menu').classList.remove('active');
-                navToggle.classList.remove('active');
-            } else if (window.innerWidth <= 768 && navToggle) {
-                navToggle.style.display = 'flex';
-            }
         });
     }
 
