@@ -1,63 +1,87 @@
-<?xml version="1.0" encoding="UTF-8"?>
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://cyberpath-digital.com/creative-design-branding/</loc>
-        <lastmod>2026-06-20</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://cyberpath-digital.com/creative-design-branding/services.html</loc>
-        <lastmod>2026-06-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://cyberpath-digital.com/creative-design-branding/portfolio.html</loc>
-        <lastmod>2026-06-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://cyberpath-digital.com/creative-design-branding/about.html</loc>
-        <lastmod>2026-06-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://cyberpath-digital.com/creative-design-branding/contact.html</loc>
-        <lastmod>2026-06-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://cyberpath-digital.com/creative-design-branding/branding.html</loc>
-        <lastmod>2026-06-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://cyberpath-digital.com/creative-design-branding/advertising.html</loc>
-        <lastmod>2026-06-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://cyberpath-digital.com/creative-design-branding/social-media-design.html</loc>
-        <lastmod>2026-06-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://cyberpath-digital.com/creative-design-branding/print-design.html</loc>
-        <lastmod>2026-06-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
-    </url>
-    <url>
-        <loc>https://cyberpath-digital.com/creative-design-branding/case-studies.html</loc>
-        <lastmod>2026-06-20</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
-    </url>
+<url>
+<loc>https://cp-creative.vercel.app/</loc>
+<lastmod>2026-06-20</lastmod>
+<changefreq>weekly</changefreq>
+<priority>1.0</priority>
+</url>
+<url>
+<loc>https://cp-creative.vercel.app/services.html</loc>
+<lastmod>2026-06-20</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://cp-creative.vercel.app/portfolio.html</loc>
+<lastmod>2026-06-20</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.8</priority>
+</url>
+<url>
+<loc>https://cp-creative.vercel.app/about.html</loc>
+<lastmod>2026-06-20</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://cp-creative.vercel.app/contact.html</loc>
+<lastmod>2026-06-20</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://cp-creative.vercel.app/branding.html</loc>
+<lastmod>2026-06-20</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://cp-creative.vercel.app/advertising.html</loc>
+<lastmod>2026-06-20</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://cp-creative.vercel.app/social-media-design.html</loc>
+<lastmod>2026-06-20</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://cp-creative.vercel.app/print-design.html</loc>
+<lastmod>2026-06-20</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>https://cp-creative.vercel.app/case-studies.html</loc>
+<lastmod>2026-06-20</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://cp-creative.vercel.app/case-studies/branding-project-1.html</loc>
+<lastmod>2026-06-20</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://cp-creative.vercel.app/case-studies/brochure-project-1.html</loc>
+<lastmod>2026-06-20</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://cp-creative.vercel.app/case-studies/social-campaign-1.html</loc>
+<lastmod>2026-06-20</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
+<loc>https://cp-creative.vercel.app/case-studies/magazine-project-1.html</loc>
+<lastmod>2026-06-21</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
 </urlset>
