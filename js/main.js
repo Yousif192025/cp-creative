@@ -17,6 +17,7 @@
         initHeaderScroll();
         initSmoothScroll();
         initMobileMenu();
+        initContactForm();
     });
 
     // ============================================
@@ -135,6 +136,43 @@
             } else if (window.innerWidth <= 768 && navToggle) {
                 navToggle.style.display = 'flex';
             }
+        });
+    }
+
+    // ============================================
+    // CONTACT FORM (mailto submission - no backend on this static site)
+    // ============================================
+    function initContactForm() {
+        const form = document.getElementById('contactForm');
+        const status = document.getElementById('contactFormStatus');
+
+        if (!form) return;
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            if (!form.checkValidity()) {
+                form.reportValidity();
+                return;
+            }
+
+            const name = form.querySelector('#contact-name').value.trim();
+            const email = form.querySelector('#contact-email').value.trim();
+            const subject = form.querySelector('#contact-subject').value;
+            const message = form.querySelector('#contact-message').value.trim();
+
+            const mailSubject = `${subject} - ${name}`;
+            const mailBody = `الاسم: ${name}\nالبريد الإلكتروني: ${email}\n\nالرسالة:\n${message}`;
+
+            const mailtoLink = `mailto:info@cyberpath.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+
+            if (status) {
+                status.style.display = 'block';
+                status.style.color = '#10B981';
+                status.textContent = 'جاري فتح برنامج البريد الإلكتروني...';
+            }
+
+            window.location.href = mailtoLink;
         });
     }
 
