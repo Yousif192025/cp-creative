@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دراسة حالة - تصميم مجلة شهرية | CyberPath Digital</title>
+    <meta name="description" content="دراسة حالة متكاملة حول تصميم مجلة شهرية متخصصة، وكيف ساهم ذلك في زيادة عدد القراء وتعزيز مكانة الناشر." />
+    <link rel="canonical" href="https://cp-creative.vercel.app/case-studies/magazine-project-1.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="دراسة حالة - تصميم مجلة شهرية | CyberPath Digital" />
+    <meta property="og:description" content="كيف ساعدنا دار نشر في تصميم مجلة شهرية متخصصة ساهمت في زيادة عدد القراء بنسبة 90%." />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://cp-creative.vercel.app/case-studies/magazine-project-1.html" />
+    <meta property="og:image" content="https://cp-creative.vercel.app/assets/images/og-default.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="تصميم مجلة شهرية - دراسة حالة" />
+    <meta name="twitter:description" content="كيف ساعدنا دار نشر في تصميم مجلة شهرية متخصصة ساهمت في زيادة عدد القراء بنسبة 90%." />
+    <meta name="twitter:image" content="https://cp-creative.vercel.app/assets/images/og-default.png" />
+
+    <!-- Preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/animations.css" />
+    <link rel="stylesheet" href="../css/responsive.css" />
+
+    <style>
+        /* أنماط خاصة بصفحات دراسات الحالة */
+        .case-hero {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .case-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(108, 60, 225, 0.15) 0%, rgba(236, 72, 153, 0.05) 100%);
+            z-index: 0;
+        }
+
+        .case-hero .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .case-badge {
+            display: inline-block;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background: rgba(108, 60, 225, 0.15);
+            color: var(--color-primary-light);
+            border: 1px solid rgba(108, 60, 225, 0.2);
+            margin-bottom: 16px;
+        }
+
+        .case-meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            margin: 32px 0;
+            padding: 24px;
+            background: var(--glass-bg);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--glass-border);
+        }
+
+        .case-meta-item {
+            text-align: center;
+        }
+
+        .case-meta-item .label {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--color-gray-light);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .case-meta-item .value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-white);
+        }
+
+        .case-section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .case-section:last-of-type {
+            border-bottom: none;
+        }
+
+        .case-section-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .case-section-title .number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            font-size: 0.9rem;
+            font-weight: 800;
+            color: var(--color-white);
+            flex-shrink: 0;
+        }
+
+        .case-section-content {
+            color: var(--color-gray-light);
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        .case-section-content strong {
+            color: var(--color-white);
+        }
+
+        .result-highlight {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 24px 0;
+            text-align: center;
+        }
+
+        .result-highlight .number {
+            font-size: 3rem;
+            font-weight: 800;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+        }
+
+        .result-highlight .label {
+            font-size: 1rem;
+            color: var(--color-gray-light);
+        }
+
+        .brochure-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+            margin: 24px 0;
+        }
+
+        .brochure-feature {
+            padding: 24px;
+            background: var(--glass-bg);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--glass-border);
+            text-align: center;
+            transition: var(--transition-medium);
+        }
+
+        .brochure-feature:hover {
+            transform: translateY(-4px);
+            border-color: var(--color-primary);
+        }
+
+        .brochure-feature .icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .brochure-feature h4 {
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .brochure-feature p {
+            color: var(--color-gray-light);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .before-after {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin: 24px 0;
+        }
+
+        .before-after .card {
+            padding: 24px;
+            background: var(--glass-bg);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--glass-border);
+            text-align: center;
+        }
+
+        .before-after .card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .before-after .card.before .icon {
+            color: #EF4444;
+        }
+
+        .before-after .card.after .icon {
+            color: #10B981;
+        }
+
+        .before-after .card h4 {
+            margin-bottom: 8px;
+        }
+
+        .before-after .card ul {
+            text-align: right;
+            color: var(--color-gray-light);
+            font-size: 0.95rem;
+            padding: 0;
+            list-style: none;
+        }
+
+        .before-after .card ul li {
+            padding: 4px 0;
+        }
+
+        .testimonial-box {
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            padding: 32px;
+            margin: 24px 0;
+            position: relative;
+        }
+
+        .testimonial-box .quote-icon {
+            font-size: 2.5rem;
+            color: var(--color-primary-light);
+            opacity: 0.3;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .testimonial-box blockquote {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--color-gray-light);
+            font-style: italic;
+        }
+
+        .testimonial-box .author {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-top: 16px;
+        }
+
+        .testimonial-box .author .avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .testimonial-box .author .name {
+            font-weight: 600;
+            color: var(--color-white);
+        }
+
+        .testimonial-box .author .role {
+            font-size: 0.85rem;
+            color: var(--color-gray-light);
+        }
+
+        .related-projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 20px;
+            margin-top: 24px;
+        }
+
+        .related-project {
+            padding: 20px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-md);
+            transition: var(--transition-medium);
+            text-align: center;
+        }
+
+        .related-project:hover {
+            transform: translateY(-4px);
+            border-color: var(--color-primary);
+        }
+
+        .related-project .icon {
+            font-size: 2rem;
+            color: var(--color-primary-light);
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .related-project h4 {
+            font-size: 1rem;
+            margin-bottom: 4px;
+        }
+
+        .related-project p {
+            color: var(--color-gray-light);
+            font-size: 0.85rem;
+        }
+
+        .related-project .link {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--color-primary-light);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: var(--transition-fast);
+        }
+
+        .related-project .link:hover {
+            color: var(--color-white);
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--color-gray-light);
+            font-weight: 600;
+            transition: var(--transition-fast);
+            margin-bottom: 24px;
+        }
+
+        .back-link:hover {
+            color: var(--color-white);
+            gap: 12px;
+        }
+
+        .design-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .design-gallery .item {
+            aspect-ratio: 3/4;
+            background: var(--color-dark-card);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-gray-light);
+            font-size: 0.9rem;
+            gap: 8px;
+            transition: var(--transition-medium);
+        }
+
+        .design-gallery .item:hover {
+            border-color: var(--color-primary);
+            transform: scale(1.02);
+        }
+
+        .design-gallery .item i {
+            font-size: 2.5rem;
+            color: var(--color-primary-light);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .before-after {
+                grid-template-columns: 1fr;
+            }
+
+            .case-meta-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .case-section-title {
+                font-size: 1.3rem;
+            }
+
+            .case-section-title .number {
+                width: 32px;
+                height: 32px;
+                font-size: 0.8rem;
+            }
+
+            .brochure-features {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .case-meta-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .result-highlight .number {
+                font-size: 2.2rem;
+            }
+
+            .testimonial-box {
+                padding: 20px;
+            }
+
+            .brochure-features {
+                grid-template-columns: 1fr;
+            }
+
+            .design-gallery {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+    <link rel="manifest" href="../manifest.json" />
+    <link rel="icon" href="../assets/icons/favicon.ico" type="image/x-icon" />
+</head>
+<body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" role="banner">
+        <nav class="navbar container" role="navigation" aria-label="القائمة الرئيسية">
+            <div class="logo">
+                <a href="../index.html">
+                    <span class="logo-icon">⚡</span>
+                    CyberPath <span class="logo-accent">Digital</span>
+                </a>
+            </div>
+
+            <button class="nav-toggle" aria-label="فتح القائمة" aria-expanded="false">
+                <span class="hamburger"></span>
+            </button>
+
+            <ul class="nav-menu" role="menubar">
+                <li role="none"><a href="../index.html" role="menuitem">الرئيسية</a></li>
+                <li role="none"><a href="../services.html" role="menuitem">الخدمات</a></li>
+                <li role="none"><a href="../portfolio.html" role="menuitem">أعمالنا</a></li>
+                <li role="none"><a href="../about.html" role="menuitem">عن الشركة</a></li>
+                <li role="none"><a href="../contact.html" role="menuitem" class="nav-cta">تواصل معنا</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <main>
+        <!-- ===== CASE HERO ===== -->
+        <section class="case-hero" style="padding:140px 0 60px;background:var(--bg-secondary);">
+            <div class="container">
+                <a href="../case-studies.html" class="back-link">
+                    <i class="fas fa-arrow-right"></i> العودة إلى دراسات الحالة
+                </a>
+
+                <span class="case-badge">
+                    <i class="fas fa-newspaper"></i> مجلات
+                </span>
+
+                <h1 class="section-title" style="font-size:clamp(2rem, 4vw, 3rem);">
+                    تصميم مجلة شهرية
+                </h1>
+
+                <p style="color:var(--color-gray-light);font-size:1.2rem;max-width:700px;margin-top:12px;">
+                    كيف صممنا مجلة شهرية متخصصة ساهمت في زيادة عدد القراء بنسبة <strong style="color:var(--color-white);">90%</strong> وتعزيز مكانة الناشر في السوق
+                </p>
+
+                <div class="case-meta-grid">
+                    <div class="case-meta-item">
+                        <span class="label">العميل</span>
+                        <span class="value">دار نشر متخصصة</span>
+                    </div>
+                    <div class="case-meta-item">
+                        <span class="label">الخدمة</span>
+                        <span class="value">تصميم المجلات</span>
+                    </div>
+                    <div class="case-meta-item">
+                        <span class="label">المدة</span>
+                        <span class="value">4 أسابيع</span>
+                    </div>
+                    <div class="case-meta-item">
+                        <span class="label">النتيجة</span>
+                        <span class="value" style="color:#10B981;">+90% قراء</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 1: CLIENT OVERVIEW ===== -->
+        <section class="case-section">
+            <div class="container">
+                <h2 class="case-section-title">
+                    <span class="number">01</span>
+                    نظرة عامة على العميل
+                </h2>
+
+                <div class="case-section-content">
+                    <p>
+                        <strong>دار نشر متخصصة</strong> تصدر مجلة شهرية تغطي مواضيع الأعمال ونمط الحياة في المنطقة.
+                        كانت المجلة تعتمد على تصميم تقليدي لم يعد يواكب توقعات القراء، وكانت الدار بحاجة إلى
+                        <strong>هوية بصرية عصرية</strong> تعزز قراءة المجلة وتزيد من اشتراكات القراء.
+                    </p>
+
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px;">
+                        <div style="background:var(--glass-bg);padding:20px;border-radius:var(--radius-md);border:1px solid var(--glass-border);">
+                            <h4 style="color:var(--color-primary-light);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.5px;">التحدي الرئيسي</h4>
+                            <p style="color:var(--color-gray-light);margin-top:8px;">تصميم غير متسق وتايبوغرافيا صعبة القراءة أثرت على تجربة القارئ</p>
+                        </div>
+                        <div style="background:var(--glass-bg);padding:20px;border-radius:var(--radius-md);border:1px solid var(--glass-border);">
+                            <h4 style="color:var(--color-primary-light);font-size:0.85rem;text-transform:uppercase;letter-spacing:0.5px;">الهدف</h4>
+                            <p style="color:var(--color-gray-light);margin-top:8px;">تصميم نظام مجلة متكامل وسهل القراءة يعزز الاشتراكات الشهرية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 2: STRATEGY ===== -->
+        <section class="case-section">
+            <div class="container">
+                <h2 class="case-section-title">
+                    <span class="number">02</span>
+                    الاستراتيجية
+                </h2>
+
+                <div class="case-section-content">
+                    <p>
+                        قمنا بتطوير <strong>استراتيجية تصميم تحريرية</strong> متكاملة للمجلة، تركز على:
+                    </p>
+
+                    <div class="brochure-features">
+                        <div class="brochure-feature">
+                            <span class="icon">📐</span>
+                            <h4>تخطيط تحريري واضح</h4>
+                            <p>نظام شبكي متسق لتسهيل تتبع المحتوى</p>
+                        </div>
+                        <div class="brochure-feature">
+                            <span class="icon">🎨</span>
+                            <h4>هوية بصرية متسقة</h4>
+                            <p>غلاف وأقسام داخلية بلغة بصرية موحدة</p>
+                        </div>
+                        <div class="brochure-feature">
+                            <span class="icon">🖼️</span>
+                            <h4>اختيار صور احترافي</h4>
+                            <p>صور عالية الجودة تدعم المحتوى التحريري</p>
+                        </div>
+                        <div class="brochure-feature">
+                            <span class="icon">🔤</span>
+                            <h4>تايبوغرافيا مقروءة</h4>
+                            <p>نظام خطوط مريح للقراءة الطويلة</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 3: DESIGN PROCESS ===== -->
+        <section class="case-section">
+            <div class="container">
+                <h2 class="case-section-title">
+                    <span class="number">03</span>
+                    عملية التصميم
+                </h2>
+
+                <div class="case-section-content">
+                    <p>
+                        اتبعنا <strong>عملية تصميم منظمة</strong> لضمان الحصول على أفضل نتيجة ممكنة:
+                    </p>
+
+                    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:16px;margin-top:20px;">
+                        <div style="background:var(--glass-bg);padding:16px;border-radius:var(--radius-md);border:1px solid var(--glass-border);text-align:center;">
+                            <div style="font-size:2rem;margin-bottom:8px;">🔍</div>
+                            <h4 style="font-size:0.95rem;">البحث والتحليل</h4>
+                            <p style="color:var(--color-gray-light);font-size:0.85rem;margin:0;">دراسة المجلات المنافسة وتفضيلات القراء</p>
+                        </div>
+                        <div style="background:var(--glass-bg);padding:16px;border-radius:var(--radius-md);border:1px solid var(--glass-border);text-align:center;">
+                            <div style="font-size:2rem;margin-bottom:8px;">✏️</div>
+                            <h4 style="font-size:0.95rem;">التخطيط</h4>
+                            <p style="color:var(--color-gray-light);font-size:0.85rem;margin:0;">هيكلة الأقسام وتوزيع الصفحات</p>
+                        </div>
+                        <div style="background:var(--glass-bg);padding:16px;border-radius:var(--radius-md);border:1px solid var(--glass-border);text-align:center;">
+                            <div style="font-size:2rem;margin-bottom:8px;">🎨</div>
+                            <h4 style="font-size:0.95rem;">التصميم</h4>
+                            <p style="color:var(--color-gray-light);font-size:0.85rem;margin:0;">تصميم الغلاف والصفحات الداخلية</p>
+                        </div>
+                        <div style="background:var(--glass-bg);padding:16px;border-radius:var(--radius-md);border:1px solid var(--glass-border);text-align:center;">
+                            <div style="font-size:2rem;margin-bottom:8px;">🔄</div>
+                            <h4 style="font-size:0.95rem;">المراجعة</h4>
+                            <p style="color:var(--color-gray-light);font-size:0.85rem;margin:0;">تعديلات وتحسينات حسب ملاحظات هيئة التحرير</p>
+                        </div>
+                        <div style="background:var(--glass-bg);padding:16px;border-radius:var(--radius-md);border:1px solid var(--glass-border);text-align:center;">
+                            <div style="font-size:2rem;margin-bottom:8px;">✅</div>
+                            <h4 style="font-size:0.95rem;">التسليم</h4>
+                            <p style="color:var(--color-gray-light);font-size:0.85rem;margin:0;">قالب جاهز للطباعة الشهرية</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 4: MAGAZINE FEATURES ===== -->
+        <section class="case-section">
+            <div class="container">
+                <h2 class="case-section-title">
+                    <span class="number">04</span>
+                    مميزات المجلة
+                </h2>
+
+                <div class="case-section-content">
+                    <p>
+                        تم تصميم المجلة لتشمل <strong>عناصر مميزة</strong> جعلتها تجربة قراءة احترافية:
+                    </p>
+
+                    <div class="design-gallery">
+                        <div class="item">
+                            <i class="fas fa-image"></i>
+                            <span>تصميم غلاف جذاب</span>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-layer-group"></i>
+                            <span>تخطيط صفحات متقن</span>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-font"></i>
+                            <span>نظام تايبوغرافيا</span>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-list"></i>
+                            <span>فهرس تفاعلي</span>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-camera"></i>
+                            <span>صور عالية الجودة</span>
+                        </div>
+                        <div class="item">
+                            <i class="fas fa-palette"></i>
+                            <span>تناسق الألوان</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:20px;padding:20px;background:var(--glass-bg);border-radius:var(--radius-md);border:1px solid var(--glass-border);">
+                        <h4 style="color:var(--color-white);margin-bottom:8px;">📋 مواصفات المجلة</h4>
+                        <ul style="color:var(--color-gray-light);font-size:0.95rem;padding:0;list-style:none;">
+                            <li style="padding:4px 0;border-bottom:1px solid var(--glass-border);">• عدد الصفحات: 48 صفحة</li>
+                            <li style="padding:4px 0;border-bottom:1px solid var(--glass-border);">• المقاس: 21 × 27 سم</li>
+                            <li style="padding:4px 0;border-bottom:1px solid var(--glass-border);">• نوع الورق: مصقول فاخر</li>
+                            <li style="padding:4px 0;">• الطباعة: أربع ألوان (CMYK) شهرياً</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 5: BEFORE & AFTER ===== -->
+        <section class="case-section">
+            <div class="container">
+                <h2 class="case-section-title">
+                    <span class="number">05</span>
+                    قبل وبعد
+                </h2>
+
+                <div class="case-section-content">
+                    <p>المقارنة بين تصميم المجلة السابق والتصميم الجديد:</p>
+
+                    <div class="before-after">
+                        <div class="card before">
+                            <span class="icon">📰</span>
+                            <h4 style="color:#EF4444;">قبل التصميم الجديد</h4>
+                            <ul>
+                                <li>• تصميم تقليدي غير منظم</li>
+                                <li>• تايبوغرافيا غير متسقة</li>
+                                <li>• جودة طباعة متوسطة</li>
+                                <li>• لا يعكس مكانة المجلة في السوق</li>
+                            </ul>
+                        </div>
+                        <div class="card after">
+                            <span class="icon">📖</span>
+                            <h4 style="color:#10B981;">بعد التصميم الجديد</h4>
+                            <ul>
+                                <li>• تصميم عصري واحترافي</li>
+                                <li>• نظام تايبوغرافيا متسق</li>
+                                <li>• جودة طباعة عالية</li>
+                                <li>• يعزز مكانة المجلة في السوق</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 6: RESULTS ===== -->
+        <section class="case-section">
+            <div class="container">
+                <h2 class="case-section-title">
+                    <span class="number">06</span>
+                    النتائج والتأثير
+                </h2>
+
+                <div class="case-section-content">
+                    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px;">
+                        <div class="result-highlight">
+                            <span class="number">90%</span>
+                            <span class="label">زيادة في عدد القراء</span>
+                        </div>
+                        <div class="result-highlight">
+                            <span class="number">60%</span>
+                            <span class="label">نمو في الاشتراكات</span>
+                        </div>
+                        <div class="result-highlight">
+                            <span class="number">70%</span>
+                            <span class="label">تحسن في تقييم المحتوى البصري</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:24px;padding:24px;background:var(--glass-bg);border-radius:var(--radius-md);border:1px solid var(--glass-border);">
+                        <h4 style="color:var(--color-white);margin-bottom:8px;">📊 أبرز الإنجازات</h4>
+                        <ul style="color:var(--color-gray-light);font-size:1rem;padding:0;list-style:none;">
+                            <li style="padding:6px 0;border-bottom:1px solid var(--glass-border);">
+                                ✅ زيادة عدد القراء بنسبة 90% خلال 3 أشهر من إطلاق التصميم الجديد
+                            </li>
+                            <li style="padding:6px 0;border-bottom:1px solid var(--glass-border);">
+                                ✅ نمو الاشتراكات الشهرية بنسبة 60%
+                            </li>
+                            <li style="padding:6px 0;border-bottom:1px solid var(--glass-border);">
+                                ✅ تحسن تقييم المحتوى البصري بنسبة 70% حسب استبيان القراء
+                            </li>
+                            <li style="padding:6px 0;">
+                                ✅ اعتماد التصميم كقالب رسمي لجميع الإصدارات الشهرية القادمة
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 7: CLIENT TESTIMONIAL ===== -->
+        <section class="case-section">
+            <div class="container">
+                <h2 class="case-section-title">
+                    <span class="number">07</span>
+                    شهادة العميل
+                </h2>
+
+                <div class="testimonial-box">
+                    <span class="quote-icon"><i class="fas fa-quote-right"></i></span>
+                    <blockquote>
+                        "غيّر فريق CyberPath Digital الطريقة التي يتفاعل بها قراؤنا مع المجلة.
+                        التخطيط الجديد والتايبوغرافيا المريحة جعلت تجربة القراءة أكثر متعة، وانعكس ذلك مباشرة
+                        على نمو اشتراكاتنا. تعامل احترافي من الألف إلى الياء."
+                    </blockquote>
+                    <div class="author">
+                        <div class="avatar">س</div>
+                        <div>
+                            <div class="name">سارة المطيري</div>
+                            <div class="role">رئيسة تحرير - دار نشر متخصصة</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== SECTION 8: RELATED PROJECTS ===== -->
+        <section class="case-section" style="border-bottom:none;padding-bottom:40px;">
+            <div class="container">
+                <h2 class="case-section-title">
+                    <span class="number">08</span>
+                    مشاريع ذات صلة
+                </h2>
+
+                <div class="related-projects">
+                    <a href="branding-project-1.html" class="related-project">
+                        <span class="icon"><i class="fas fa-pen-fancy"></i></span>
+                        <h4>إعادة تصميم هوية شركة تقنية</h4>
+                        <p>هوية بصرية متكاملة لشركة ناشئة</p>
+                        <span class="link">اقرأ الدراسة →</span>
+                    </a>
+                    <a href="social-campaign-1.html" class="related-project">
+                        <span class="icon"><i class="fas fa-bullhorn"></i></span>
+                        <h4>حملة إعلانية لعلامة تجارية أزياء</h4>
+                        <p>زيادة المبيعات بنسبة 150%</p>
+                        <span class="link">اقرأ الدراسة →</span>
+                    </a>
+                    <a href="brochure-project-1.html" class="related-project">
+                        <span class="icon"><i class="fas fa-book"></i></span>
+                        <h4>بروشور شركة عقارية كبرى</h4>
+                        <p>زيادة المبيعات بنسبة 75%</p>
+                        <span class="link">اقرأ الدراسة →</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== CTA SECTION ===== -->
+        <section style="padding:40px 0 80px;">
+            <div class="container">
+                <div class="cta-content glass-card" style="padding:48px 32px;text-align:center;">
+                    <h2 style="font-size:clamp(1.5rem, 3vw, 2.2rem);">هل تحتاج إلى تصميم مجلة احترافي؟</h2>
+                    <p style="color:var(--color-gray-light);font-size:1.1rem;margin:12px 0 24px;">
+                        دعنا نساعدك في تصميم قالب مجلة يعزز تجربة القراءة ويزيد من اشتراكات جمهورك
+                    </p>
+                    <a href="../contact.html" class="btn btn-primary btn-large">
+                        <i class="fas fa-comment"></i> احصل على استشارة مجانية
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">⚡</span>
+                        CyberPath <span class="logo-accent">Digital</span>
+                    </div>
+                    <p>نقدم حلولاً إبداعية في التصميم والهوية البصرية، نساعد العلامات التجارية على التميز والنمو.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="انستغرام"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="لينكدإن"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h4>خدماتنا</h4>
+                    <ul>
+                        <li><a href="../branding.html">الهوية البصرية</a></li>
+                        <li><a href="../branding.html">تصميم الشعارات</a></li>
+                        <li><a href="../advertising.html">الإعلانات</a></li>
+                        <li><a href="../social-media-design.html">وسائل التواصل</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>روابط سريعة</h4>
+                    <ul>
+                        <li><a href="../about.html">عن الشركة</a></li>
+                        <li><a href="../portfolio.html">أعمالنا</a></li>
+                        <li><a href="../case-studies.html">دراسات الحالة</a></li>
+                        <li><a href="../contact.html">تواصل معنا</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>تواصل معنا</h4>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+966561428260">+966 561428260</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@cyberpath.com">info@cyberpath.com</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 CyberPath Digital. جميع الحقوق محفوظة.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ===== SCRIPTS ===== -->
+    <script src="../js/main.js"></script>
+
+    <!-- ===== JSON-LD SCHEMA ===== -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "تصميم مجلة شهرية - دراسة حالة",
+        "description": "كيف ساعدنا دار نشر في تصميم مجلة شهرية متخصصة ساهمت في زيادة عدد القراء بنسبة 90% وتعزيز مكانة الناشر.",
+        "author": {
+            "@type": "Organization",
+            "name": "CyberPath Digital"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "CyberPath Digital"
+        },
+        "datePublished": "2026-06-21",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://cp-creative.vercel.app/case-studies/magazine-project-1.html"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "الرئيسية",
+                "item": "https://cp-creative.vercel.app/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "دراسات الحالة",
+                "item": "https://cp-creative.vercel.app/case-studies.html"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "تصميم مجلة شهرية"
+            }
+        ]
+    }
+    </script>
+</body>
+</html>
