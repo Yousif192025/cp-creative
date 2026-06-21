@@ -71,6 +71,7 @@ body {
     color: var(--color-white);
     line-height: 1.7;
     overflow-x: hidden;
+    overflow-wrap: break-word;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -227,11 +228,15 @@ ul {
 .nav-toggle {
     display: none;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 6px;
     background: none;
     border: none;
     cursor: pointer;
     padding: 4px;
+    min-width: 44px;
+    min-height: 44px;
 }
 
 .hamburger {
@@ -275,6 +280,41 @@ ul {
 .nav-toggle.active .hamburger::after {
     transform: rotate(-45deg);
     bottom: 0;
+}
+
+/* Mobile menu overlay/backdrop */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    z-index: 998;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-medium);
+}
+
+@media (max-width: 768px) {
+    .nav-overlay {
+        display: block;
+    }
+
+    .nav-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+    }
+}
+
+/* Body scroll lock while the mobile menu is open */
+body.nav-open {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
 }
 
 /* ============================================
@@ -707,6 +747,9 @@ section {
 
 .filter-btn {
     padding: 10px 24px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
     border: none;
     border-radius: 50px;
     background: var(--glass-bg);
@@ -1097,8 +1140,8 @@ section {
 }
 
 .social-links a {
-    width: 40px;
-    height: 40px;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
