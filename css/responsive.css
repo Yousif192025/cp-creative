@@ -41,11 +41,16 @@
     }
     
     .workflow-steps {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
     
     .testimonials-slider {
         grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
     }
 }
 
