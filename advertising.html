@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -5,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>تصميم الإعلانات | CyberPath Digital</title>
     <meta name="description" content="خدمات تصميم الإعلانات المبتكرة التي تجذب الانتباه وتحقق أهدافك التسويقية." />
-    <link rel="canonical" href="https://cyberpath-digital.com/creative-design-branding/advertising.html" />
+    <link rel="canonical" href="https://cp-creative.vercel.app/advertising.html" />
     
     <meta property="og:title" content="تصميم الإعلانات | CyberPath Digital" />
     <meta property="og:description" content="خدمات تصميم الإعلانات المبتكرة التي تجذب الانتباه وتحقق أهدافك التسويقية." />
+    <meta property="og:image" content="https://cp-creative.vercel.app/assets/images/og-default.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="تصميم الإعلانات | CyberPath Digital" />
+    <meta name="twitter:description" content="خدمات تصميم الإعلانات المبتكرة التي تجذب الانتباه وتحقق أهدافك التسويقية." />
+    <meta name="twitter:image" content="https://cp-creative.vercel.app/assets/images/og-default.png" />
     
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,6 +26,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
 </head>
 <body>
     <header class="header" role="banner">
@@ -97,7 +108,7 @@
                 <div class="footer-contact">
                     <h4>تواصل معنا</h4>
                     <ul>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+966501234567">+966 50 123 4567</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+966561428260">+966 561428260</a></li>
                         <li><i class="fas fa-envelope"></i> <a href="mailto:info@cyberpath.com">info@cyberpath.com</a></li>
                     </ul>
                 </div>
@@ -109,5 +120,27 @@
     </footer>
 
     <script src="js/main.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "تصميم الإعلانات",
+        "serviceType": "تصميم الإعلانات",
+        "description": "إعلانات مبتكرة تجذب الانتباه وتحقق أهدافك التسويقية.",
+        "provider": { "@type": "Organization", "name": "CyberPath Digital" },
+        "areaServed": "المملكة العربية السعودية"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://cp-creative.vercel.app/" },
+            { "@type": "ListItem", "position": 2, "name": "تصميم الإعلانات" }
+        ]
+    }
+    </script>
 </body>
 </html>
