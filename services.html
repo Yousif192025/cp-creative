@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -5,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>خدمات التصميم الإبداعي | CyberPath Digital</title>
     <meta name="description" content="نقدم خدمات تصميم متكاملة تشمل الهوية البصرية، الشعارات، الإعلانات، وسائل التواصل، والتصميم الطباعي." />
-    <link rel="canonical" href="https://cyberpath-digital.com/creative-design-branding/services.html" />
+    <link rel="canonical" href="https://cp-creative.vercel.app/services.html" />
     
     <!-- Open Graph -->
     <meta property="og:title" content="خدمات التصميم الإبداعي | CyberPath Digital" />
     <meta property="og:description" content="نقدم خدمات تصميم متكاملة تشمل الهوية البصرية، الشعارات، الإعلانات، وسائل التواصل، والتصميم الطباعي." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://cyberpath-digital.com/creative-design-branding/services.html" />
+    <meta property="og:url" content="https://cp-creative.vercel.app/services.html" />
+    <meta property="og:image" content="https://cp-creative.vercel.app/assets/images/og-default.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -24,6 +28,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/animations.css" />
     <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="manifest" href="manifest.json" />
+    <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
 </head>
 <body>
     <!-- Header -->
@@ -209,7 +215,7 @@
                 <div class="footer-contact">
                     <h4>تواصل معنا</h4>
                     <ul>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+966501234567">+966 50 123 4567</a></li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+96651428260">+966 561428260</a></li>
                         <li><i class="fas fa-envelope"></i> <a href="mailto:info@cyberpath.com">info@cyberpath.com</a></li>
                         <li><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</li>
                     </ul>
@@ -223,5 +229,29 @@
     </footer>
 
     <script src="js/main.js"></script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "خدماتنا",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "الهوية البصرية", "url": "https://cp-creative.vercel.app/branding.html" },
+            { "@type": "ListItem", "position": 2, "name": "الإعلانات", "url": "https://cp-creative.vercel.app/advertising.html" },
+            { "@type": "ListItem", "position": 3, "name": "وسائل التواصل الاجتماعي", "url": "https://cp-creative.vercel.app/social-media-design.html" },
+            { "@type": "ListItem", "position": 4, "name": "التصميم الطباعي", "url": "https://cp-creative.vercel.app/print-design.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://cp-creative.vercel.app/" },
+            { "@type": "ListItem", "position": 2, "name": "الخدمات" }
+        ]
+    }
+    </script>
 </body>
 </html>
