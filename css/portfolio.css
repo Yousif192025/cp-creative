@@ -336,3 +336,86 @@
     background: rgba(245, 158, 11, 0.2);
     color: #F59E0B;
 }
+/* ===== PORTFOLIO PAGE FIXES ===== */
+.portfolio-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--glass-border);
+    transition: var(--transition-medium);
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 250px; /* ارتفاع ثابت للصورة */
+    object-fit: cover; /* تغطية المساحة بالكامل مع الحفاظ على النسبة */
+    display: block;
+    background: var(--color-dark-card);
+    transition: var(--transition-medium);
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05);
+}
+
+.portfolio-info {
+    padding: 20px;
+    background: var(--bg-secondary);
+}
+
+/* Masonry Layout - إصلاح الارتفاعات */
+.portfolio-masonry {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    grid-auto-rows: 280px; /* ارتفاع أساسي موحد */
+}
+
+.portfolio-masonry .portfolio-item {
+    grid-row: span 1;
+}
+
+.portfolio-masonry .portfolio-item img {
+    height: 200px; /* ارتفاع مناسب داخل العنصر */
+    object-fit: cover;
+}
+
+/* عناصر مميزة تأخذ ارتفاع أكبر */
+.portfolio-masonry .portfolio-item.featured {
+    grid-row: span 2;
+}
+
+.portfolio-masonry .portfolio-item.featured img {
+    height: 380px;
+}
+
+/* للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .portfolio-masonry {
+        grid-auto-rows: 240px;
+    }
+    
+    .portfolio-masonry .portfolio-item img {
+        height: 160px;
+    }
+    
+    .portfolio-masonry .portfolio-item.featured {
+        grid-row: span 1;
+    }
+    
+    .portfolio-masonry .portfolio-item.featured img {
+        height: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .portfolio-masonry {
+        grid-auto-rows: 200px;
+    }
+    
+    .portfolio-masonry .portfolio-item img {
+        height: 130px;
+    }
+}
