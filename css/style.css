@@ -1665,3 +1665,131 @@ section {
 .logo-link:hover .logo-image {
     animation: logoGlow 1.5s ease-in-out infinite;
 }
+/* ============================================
+   FOOTER WITH WATERMARK
+   ============================================ */
+
+.footer {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-primary);
+    border-top: 1px solid var(--glass-border);
+    padding: 60px 0 20px;
+}
+
+/* ===== WATERMARK BACKGROUND ===== */
+.footer-watermark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+    opacity: 0.04;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.footer-watermark .watermark-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: grayscale(1) brightness(2);
+    opacity: 0.3;
+    transform: rotate(-5deg) scale(0.8);
+    transition: transform 0.6s ease;
+}
+
+.footer-watermark .watermark-image:nth-child(even) {
+    transform: rotate(5deg) scale(0.9);
+}
+
+.footer-watermark .watermark-image:nth-child(3n) {
+    transform: rotate(0deg) scale(1);
+}
+
+/* ===== FOOTER CONTENT (above watermark) ===== */
+.footer-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== RESPONSIVE WATERMARK ===== */
+@media (max-width: 1024px) {
+    .footer-watermark {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 15px;
+        padding: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-watermark {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 10px;
+        padding: 20px;
+        opacity: 0.03;
+    }
+    
+    .footer-watermark .watermark-image {
+        opacity: 0.2;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-watermark {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 8px;
+        padding: 15px;
+        opacity: 0.02;
+    }
+    
+    .footer-watermark .watermark-image {
+        opacity: 0.15;
+    }
+}
+
+/* ===== ANIMATION FOR WATERMARK ===== */
+@keyframes watermarkFloat {
+    0%, 100% {
+        transform: rotate(-5deg) scale(0.8) translateY(0);
+    }
+    50% {
+        transform: rotate(-3deg) scale(0.85) translateY(-5px);
+    }
+}
+
+@keyframes watermarkFloatEven {
+    0%, 100% {
+        transform: rotate(5deg) scale(0.9) translateY(0);
+    }
+    50% {
+        transform: rotate(3deg) scale(0.95) translateY(5px);
+    }
+}
+
+.footer-watermark .watermark-image:nth-child(odd) {
+    animation: watermarkFloat 8s ease-in-out infinite;
+}
+
+.footer-watermark .watermark-image:nth-child(even) {
+    animation: watermarkFloatEven 8s ease-in-out infinite;
+}
+
+.footer-watermark .watermark-image:nth-child(3n) {
+    animation: watermarkFloat 10s ease-in-out infinite reverse;
+}
+
+/* ===== HOVER EFFECT ON FOOTER ===== */
+.footer:hover .footer-watermark .watermark-image {
+    opacity: 0.5;
+    transition: opacity 0.6s ease;
+}
