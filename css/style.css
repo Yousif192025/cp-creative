@@ -1553,3 +1553,115 @@ section {
         max-height: 38px;
     }
 }
+/* ===== LOGO WITH IMAGE AND TEXT ===== */
+.logo-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}
+
+.logo-image {
+    height: 45px;
+    width: auto;
+    display: block;
+    max-height: 55px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--color-white);
+    white-space: nowrap;
+    letter-spacing: -0.5px;
+}
+
+.logo-accent {
+    color: var(--color-primary-light);
+}
+
+/* ===== FOOTER LOGO ===== */
+.footer-brand .logo-link {
+    margin-bottom: 12px;
+}
+
+.footer-logo {
+    height: 40px;
+    max-height: 45px;
+}
+
+.footer-brand .logo-text {
+    font-size: 1.2rem;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 992px) {
+    .logo-image {
+        height: 40px;
+        max-height: 48px;
+    }
+    
+    .logo-text {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-image {
+        height: 35px;
+        max-height: 40px;
+    }
+    
+    .logo-text {
+        font-size: 1rem;
+    }
+    
+    .logo-link {
+        gap: 10px;
+    }
+    
+    .footer-logo {
+        height: 30px;
+        max-height: 35px;
+    }
+    
+    .footer-brand .logo-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-image {
+        height: 28px;
+        max-height: 32px;
+    }
+    
+    .logo-text {
+        font-size: 0.85rem;
+    }
+    
+    .logo-link {
+        gap: 6px;
+    }
+}
+
+/* ===== ANIMATION ===== */
+@keyframes logoGlow {
+    0%, 100% {
+        filter: drop-shadow(0 0 5px rgba(108, 60, 225, 0.2));
+    }
+    50% {
+        filter: drop-shadow(0 0 15px rgba(108, 60, 225, 0.4));
+    }
+}
+
+.logo-link:hover .logo-image {
+    animation: logoGlow 1.5s ease-in-out infinite;
+}
