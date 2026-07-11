@@ -104,9 +104,9 @@
         },
         {
             id: 5,
-            title: 'بروشور شركة عقارية',
+            title: 'بروشور شركة تجارية',
             category: 'brochures',
-            description: 'بروشور احترافي لشركة عقارية',
+            description: 'بروشور احترافي لشركة تجارية',
             icon: '📄',
             image: 'assets/images/portfolio/brochure-1.jpg'
         },
