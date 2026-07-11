@@ -128,9 +128,9 @@
         },
         {
             id: 8,
-            title: 'شعار شركة استشارية',
+            title: 'شعار شركة استثمارية',
             category: 'logos',
-            description: 'شعار احترافي لشركة استشارية',
+            description: 'شعار احترافي لشركة استثمارية',
             icon: '💼',
             image: 'assets/images/portfolio/logo-2.jpg'
         },
