@@ -1,7 +1,7 @@
 /**
  * ============================================
  * CYBERPATH DIGITAL - PORTFOLIO.JS
- * إدارة معرض الأعمال مع بيانات العملاء الحقيقية
+ * إدارة معرض الأعمال مع SVG Placeholders احترافية
  * ============================================
  */
 
@@ -9,9 +9,10 @@
     'use strict';
 
     // ============================================
-    // SVG PLACEHOLDER GENERATOR
+    // SVG PLACEHOLDER GENERATOR (محسّن للأمان)
     // ============================================
     function generateSVGPlaceholder(title, category, icon) {
+        // ألوان كل تصنيف
         const colors = {
             'branding': '6C3CE1',
             'logos': 'EC4899',
@@ -33,6 +34,7 @@
         const color = colors[category] || '6C3CE1';
         const categoryLabel = categoryLabels[category] || category;
         
+        // SVG آمن باستخدام encodeURIComponent
         const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
             <defs>
                 <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -60,359 +62,205 @@
             <text x="30" y="385" font-family="Arial, sans-serif" font-size="11" fill="rgba(255,255,255,0.08)" text-anchor="start">© CyberPath Digital</text>
         </svg>`;
         
+        // تحويل SVG إلى Data URI آمن
         return 'data:image/svg+xml,' + encodeURIComponent(svg);
     }
 
     // ============================================
-    // PORTFOLIO DATA - مع أسماء العملاء الحقيقية
+    // PORTFOLIO DATA - جميع الصور بصيغة JPG
     // ============================================
     const portfolioData = [
-        // ===== BRANDING (1-4) =====
         {
             id: 1,
-            title: 'هوية شركة جياد للتقنية',
+            title: 'هوية شركة تقنية',
             category: 'branding',
-            description: 'هوية بصرية متكاملة لشركة تقنية رائدة في الذكاء الاصطناعي',
+            description: 'هوية بصرية متكاملة لشركة تقنية ناشئة',
             icon: '🏢',
-            image: 'assets/images/portfolio/branding-1.jpg',
-            client: 'شركة جياد للتقنية',
-            sector: 'التقنية',
-            year: '2024',
-            challenge: 'شركة جياد بحاجة لهوية تعكس الريادة في الذكاء الاصطناعي والثقة التقنية.',
-            result: 'جذب استثمارات جديدة وزيادة الوعي بالعلامة بنسبة 200%.',
-            testimonial: '"الهوية غيرت شكل الشركة بالكامل وأعطتنا ثقة جديدة في السوق."'
+            image: 'assets/images/portfolio/branding-1.jpg'
         },
         {
             id: 2,
-            title: 'هوية عبق الياسمين للعود',
-            category: 'branding',
-            description: 'هوية بصرية لعلامة تجارية متخصصة في العود والعطور العربية',
-            icon: '🏢',
-            image: 'assets/images/portfolio/branding-2.jpg',
-            client: 'عبق الياسمين للعود والعطور',
-            sector: 'العطور والرفاهية',
-            year: '2024',
-            challenge: 'علامة جديدة بحاجة لهوية تعكس الأصالة والفخامة في عالم العطور العربية.',
-            result: 'دخول السوق بقوة وحصة سوقية 25% في السنة الأولى.',
-            testimonial: '"الهوية تعكس روح علامتنا — عمل فني متكامل."'
+            title: 'شعار علامة تجارية',
+            category: 'logos',
+            description: 'شعار مميز لعلامة تجارية في مجال الأزياء',
+            icon: '⭐',
+            image: 'assets/images/portfolio/logo-1.jpg'
         },
         {
             id: 3,
-            title: 'هوية وكالة العبير للسفر',
-            category: 'branding',
-            description: 'هوية بصرية لوكالة سفر وسياحة رائدة',
-            icon: '🏢',
-            image: 'assets/images/portfolio/branding-3.jpg',
-            client: 'وكالة العبير للسفر والسياحة',
-            sector: 'السياحة والسفر',
-            year: '2023',
-            challenge: 'وكالة سفر بحاجة لهوية تعكس الثقة والتميز في قطاع السياحة.',
-            result: 'زيادة الحجوزات بنسبة 50% وارتفاع الوعي بالعلامة.',
-            testimonial: '"الهوية جعلت عملاءنا يشعرون بالثقة في خدماتنا."'
+            title: 'حملة إعلانية رقمية',
+            category: 'advertising',
+            description: 'إعلانات رقمية مبتكرة لمنتج جديد',
+            icon: '📢',
+            image: 'assets/images/portfolio/advertising-1.jpg'
         },
         {
             id: 4,
-            title: 'هوية متجر زهور الريف',
-            category: 'branding',
-            description: 'هوية بصرية لمتجر إلكتروني متخصص في الزهور والهدايا',
-            icon: '🏢',
-            image: 'assets/images/portfolio/branding-4.jpg',
-            client: 'متجر زهور الريف',
-            sector: 'التجزئة الإلكترونية',
-            year: '2024',
-            challenge: 'متجر إلكتروني بحاجة لهوية جذابة تعكس الطبيعة والجمال.',
-            result: 'ارتفاع المبيعات 180% خلال 6 أشهر.',
-            testimonial: '"الهوية جعلت متجرنا يبدو وكأنه علامة عالمية."'
+            title: 'تصميم وسائل التواصل',
+            category: 'social',
+            description: 'محتوى بصري لمنصات التواصل الاجتماعي',
+            icon: '📸',
+            image: 'assets/images/portfolio/social-1.jpg'
         },
-
-        // ===== LOGOS (5-8) =====
         {
             id: 5,
-            title: 'شعار عبق الياسمين للعود',
-            category: 'logos',
-            description: 'شعار يعكس الفخامة والأصالة في عالم العطور العربية',
-            icon: '⭐',
-            image: 'assets/images/portfolio/logo-1.jpg',
-            client: 'عبق الياسمين للعود والعطور',
-            sector: 'العطور والرفاهية',
-            year: '2024',
-            challenge: 'شعار يعكس الفخامة والجودة ويجذب شريحة راقية من العملاء.',
-            result: 'ارتفاع التعرف على العلامة بنسبة 90% في السوق.',
-            testimonial: '"شعارنا أصبح أيقونة في عالم العطور."'
+            title: 'بروشور شركة تجارية',
+            category: 'brochures',
+            description: 'بروشور احترافي لشركة تجارية',
+            icon: '📄',
+            image: 'assets/images/portfolio/brochure-1.jpg'
         },
         {
             id: 6,
-            title: 'شعار شركة جياد للتقنية',
-            category: 'logos',
-            description: 'شعار يعبر عن الابتكار والريادة في عالم التقنية',
-            icon: '⭐',
-            image: 'assets/images/portfolio/logo-2.jpg',
-            client: 'شركة جياد للتقنية',
-            sector: 'التقنية',
-            year: '2023',
-            challenge: 'شعار يعبر عن الابتكار والثقة للشركة.',
-            result: 'زيادة الثقة بالعلامة وجذب شراكات استراتيجية.',
-            testimonial: '"الشعار يعكس تماماً رؤيتنا التقنية."'
+            title: 'تغليف منتج طبيعي',
+            category: 'packaging',
+            description: 'تغليف مبتكر لمنتجات طبيعية',
+            icon: '📦',
+            image: 'assets/images/portfolio/packaging-1.jpg'
         },
         {
             id: 7,
-            title: 'شعار نادي الرواد الرياضي',
-            category: 'logos',
-            description: 'شعار يعكس القوة والتميز في عالم الرياضة',
-            icon: '⭐',
-            image: 'assets/images/portfolio/logo-3.jpg',
-            client: 'نادي الرواد الرياضي',
-            sector: 'الرياضة واللياقة',
-            year: '2024',
-            challenge: 'شعار يعكس القوة والحركة ويجذب الشباب.',
-            result: 'ارتفاع التسجيل في النادي بنسبة 55%.',
-            testimonial: '"الشعار أعطانا هوية مميزة في سوق الأندية الرياضية."'
+            title: 'هوية منتج فاخر',
+            category: 'branding',
+            description: 'هوية بصرية متكاملة منتج فاخر',
+            icon: '🍽️',
+            image: 'assets/images/portfolio/branding-2.jpg'
         },
         {
             id: 8,
-            title: 'شعار مؤسسة نماء الخيرية',
+            title: 'شعار شركة استثمارية',
             category: 'logos',
-            description: 'شعار يعبر عن العطاء والأمل في المجتمع',
-            icon: '⭐',
-            image: 'assets/images/portfolio/logo-4.jpg',
-            client: 'مؤسسة نماء الخيرية',
-            sector: 'القطاع غير الربحي',
-            year: '2023',
-            challenge: 'شعار يعبر عن الأمل والعطاء ويجذب المتبرعين.',
-            result: 'ارتفاع التبرعات بنسبة 80% بعد إطلاق الهوية.',
-            testimonial: '"الشعار أصبح رمزاً للأمل في المجتمع."'
+            description: 'شعار احترافي لشركة استثمارية',
+            icon: '💼',
+            image: 'assets/images/portfolio/logo-2.jpg'
         },
-
-        // ===== ADVERTISING (9-12) =====
         {
             id: 9,
-            title: 'حملة جياد للإعلان عن الذكاء الاصطناعي',
+            title: 'إعلان تلفزيوني',
             category: 'advertising',
-            description: 'حملة إعلانية متكاملة لمنتجات الذكاء الاصطناعي',
-            icon: '📢',
-            image: 'assets/images/portfolio/advertising-1.jpg',
-            client: 'شركة جياد للتقنية',
-            sector: 'التقنية',
-            year: '2024',
-            challenge: 'إطلاق منتج جديد للذكاء الاصطناعي في السوق.',
-            result: 'زيادة المبيعات بنسبة 180% في الربع الأول.',
-            testimonial: '"الحملة كانت نقطة تحول في نجاح منتجنا."'
+            description: 'إعلان تلفزيوني لعلامة تجارية مشهورة',
+            icon: '📺',
+            image: 'assets/images/portfolio/advertising-2.jpg'
         },
         {
             id: 10,
-            title: 'إعلان العبير للحج والعمرة',
-            category: 'advertising',
-            description: 'إعلان تلفزيوني لوكالة سفر وسياحة رائدة',
-            icon: '📢',
-            image: 'assets/images/portfolio/advertising-2.jpg',
-            client: 'وكالة العبير للسفر والسياحة',
-            sector: 'السياحة والسفر',
-            year: '2024',
-            challenge: 'زيادة الوعي بخدمات الوكالة في موسم الحج والعمرة.',
-            result: 'ارتفاع الحجوزات بنسبة 65%.',
-            testimonial: '"الإعلان لمس قلوب العملاء وزاد ثقتهم بنا."'
+            title: 'تصميم انستغرام',
+            category: 'social',
+            description: 'تصاميم جذابة لحساب انستغرام',
+            icon: '📱',
+            image: 'assets/images/portfolio/social-2.jpg'
         },
         {
             id: 11,
-            title: 'إعلان عبق الياسمين في مجلات الرفاهية',
-            category: 'advertising',
-            description: 'إعلان مطبوع في مجلات الرفاهية',
-            icon: '📢',
-            image: 'assets/images/portfolio/advertising-3.jpg',
-            client: 'عبق الياسمين للعود والعطور',
-            sector: 'العطور والرفاهية',
-            year: '2023',
-            challenge: 'الوصول إلى شريحة راقية من العملاء.',
-            result: 'ارتفاع المبيعات في الفئة المستهدفة بنسبة 100%.',
-            testimonial: '"الإعلان كان بوابة دخولنا لعالم الفخامة."'
+            title: 'بروشور سياحي',
+            category: 'brochures',
+            description: 'بروشور سياحي لوجهة عالمية',
+            icon: '✈️',
+            image: 'assets/images/portfolio/brochure-2.jpg'
         },
         {
             id: 12,
-            title: 'لوحة زهور الريف الإعلانية',
-            category: 'advertising',
-            description: 'لوحة إعلانية خارجية في موقع استراتيجي',
-            icon: '📢',
-            image: 'assets/images/portfolio/advertising-4.jpg',
-            client: 'متجر زهور الريف',
-            sector: 'التجزئة',
-            year: '2024',
-            challenge: 'زيادة الوعي بالمتجر في المنطقة.',
-            result: 'ارتفاع الزيارات للمتجر بنسبة 120%.',
-            testimonial: '"اللوحة جعلت الجميع يتحدثون عن متجرنا."'
+            title: 'تغليف هدايا',
+            category: 'packaging',
+            description: 'تغليف فاخر للهدايا',
+            icon: '🎁',
+            image: 'assets/images/portfolio/packaging-2.jpg'
         },
-
-        // ===== SOCIAL MEDIA (13-16) =====
         {
             id: 13,
-            title: 'حملة إطلاق عبق الياسمين',
-            category: 'social',
-            description: 'حملة إطلاق متكاملة على منصة إنستغرام',
-            icon: '📸',
-            image: 'assets/images/portfolio/social-1.jpg',
-            client: 'عبق الياسمين للعود والعطور',
-            sector: 'العطور والرفاهية',
-            year: '2024',
-            challenge: 'بناء حضور قوي على إنستغرام قبل إطلاق المنتج.',
-            result: '10,000 متابع في الشهر الأول.',
-            testimonial: '"المحتوى البصري خلق ضجة حول منتجنا."'
+            title: 'هوية علامة تجارية',
+            category: 'branding',
+            description: 'هوية بصرية متكاملة لعلامة تجارية',
+            icon: '✨',
+            image: 'assets/images/portfolio/branding-3.jpg'
         },
         {
             id: 14,
-            title: 'محتوى زهور الريف على إنستغرام',
-            category: 'social',
-            description: 'محتوى بصري جذاب لحساب إنستغرام',
-            icon: '📸',
-            image: 'assets/images/portfolio/social-2.jpg',
-            client: 'متجر زهور الريف',
-            sector: 'التجزئة الإلكترونية',
-            year: '2024',
-            challenge: 'جذب متابعين جدد وزيادة المبيعات عبر إنستغرام.',
-            result: 'زيادة المتابعين 300% وارتفاع المبيعات.',
-            testimonial: '"المحتوى البصري زاد من تفاعل عملائنا معنا."'
+            title: 'شعار نادي رياضي',
+            category: 'logos',
+            description: 'شعار مبتكر لنادي رياضي',
+            icon: '⚽',
+            image: 'assets/images/portfolio/logo-3.jpg'
         },
         {
             id: 15,
-            title: 'محتوى نادي الرواد التفاعلي',
-            category: 'social',
-            description: 'محتوى تفاعلي لصفحة فيسبوك',
-            icon: '📸',
-            image: 'assets/images/portfolio/social-3.jpg',
-            client: 'نادي الرواد الرياضي',
-            sector: 'الرياضة واللياقة',
-            year: '2024',
-            challenge: 'زيادة التفاعل مع متابعي صفحة النادي.',
-            result: 'تفاعل 200% ومشاركات واسعة.',
-            testimonial: '"المحتوى جعل صفحتنا تتفاعل بشكل غير مسبوق."'
+            title: 'إعلان مطبوع',
+            category: 'advertising',
+            description: 'إعلان مطبوع في مجلة',
+            icon: '📰',
+            image: 'assets/images/portfolio/advertising-3.jpg'
         },
         {
             id: 16,
-            title: 'محتوى شركة جياد على تويتر',
+            title: 'تصميم فيسبوك',
             category: 'social',
-            description: 'محتوى بصري جذاب لتغريدات تويتر',
-            icon: '📸',
-            image: 'assets/images/portfolio/social-4.jpg',
-            client: 'شركة جياد للتقنية',
-            sector: 'التقنية',
-            year: '2024',
-            challenge: 'تعزيز حضور الشركة في تويتر (إكس).',
-            result: 'ارتفاع المتابعين والمشاركات.',
-            testimonial: '"المحتوى البصري جعل تغريداتنا أكثر تأثيراً."'
+            description: 'تصاميم مميزة لصفحة فيسبوك',
+            icon: '👍',
+            image: 'assets/images/portfolio/social-3.jpg'
         },
-
-        // ===== BROCHURES (17-20) =====
         {
             id: 17,
-            title: 'بروشور شركة جياد التقني',
+            title: 'بروشور منتج',
             category: 'brochures',
-            description: 'بروشور احترافي لشركة تقنية رائدة',
-            icon: '📄',
-            image: 'assets/images/portfolio/brochure-1.jpg',
-            client: 'شركة جياد للتقنية',
-            sector: 'التقنية',
-            year: '2024',
-            challenge: 'تصميم بروشور يعكس ريادة الشركة في التقنية.',
-            result: 'زيادة استفسارات العملاء بنسبة 80%.',
-            testimonial: '"البروشور ساعدنا في تقديم خدماتنا بشكل احترافي."'
+            description: 'بروشور تسويقي لمنتج جديد',
+            icon: '📋',
+            image: 'assets/images/portfolio/brochure-3.jpg'
         },
         {
             id: 18,
-            title: 'بروشور العبير السياحي',
-            category: 'brochures',
-            description: 'بروشور سياحي لوجهات عالمية',
-            icon: '📄',
-            image: 'assets/images/portfolio/brochure-2.jpg',
-            client: 'وكالة العبير للسفر والسياحة',
-            sector: 'السياحة والسفر',
-            year: '2023',
-            challenge: 'تصميم بروشور يجذب المسافرين لوجهات جديدة.',
-            result: 'ارتفاع الحجوزات للوجهات الجديدة بنسبة 60%.',
-            testimonial: '"البروشور ألهم عملاءنا للسفر."'
+            title: 'تغليف مستحضرات تجميل',
+            category: 'packaging',
+            description: 'تغليف أنيق لمستحضرات تجميل',
+            icon: '💄',
+            image: 'assets/images/portfolio/packaging-3.jpg'
         },
         {
             id: 19,
-            title: 'بروشور عبق الياسمين التسويقي',
-            category: 'brochures',
-            description: 'بروشور تسويقي لمجموعة عطور جديدة',
-            icon: '📄',
-            image: 'assets/images/portfolio/brochure-3.jpg',
-            client: 'عبق الياسمين للعود والعطور',
-            sector: 'العطور والرفاهية',
-            year: '2024',
-            challenge: 'تقديم مجموعة عطور جديدة بشكل مميز.',
-            result: 'نجاح المجموعة الجديدة ومبيعات قياسية.',
-            testimonial: '"البروشور جعل منتجنا يبدو فخماً."'
+            title: 'هوية متجر إلكتروني',
+            category: 'branding',
+            description: 'هوية بصرية لمتجر إلكتروني',
+            icon: '🛒',
+            image: 'assets/images/portfolio/branding-4.jpg'
         },
         {
             id: 20,
-            title: 'بروشور زهور الريف للهدايا',
-            category: 'brochures',
-            description: 'بروشور تسويقي للهدايا والزهور',
-            icon: '📄',
-            image: 'assets/images/portfolio/brochure-4.jpg',
-            client: 'متجر زهور الريف',
-            sector: 'التجزئة الإلكترونية',
-            year: '2024',
-            challenge: 'تسويق هدايا الزهور للمناسبات المختلفة.',
-            result: 'ارتفاع الطلبات للمناسبات بنسبة 90%.',
-            testimonial: '"البروشور ساعدنا في زيادة مبيعات المناسبات."'
+            title: 'شعار منظمة غير ربحية',
+            category: 'logos',
+            description: 'شعار معبر لمنظمة غير ربحية',
+            icon: '🤝',
+            image: 'assets/images/portfolio/logo-4.jpg'
         },
-
-        // ===== PACKAGING (21-24) =====
         {
             id: 21,
-            title: 'تغليف عبق الياسمين الفاخر',
-            category: 'packaging',
-            description: 'تغليف فاخر لمجموعة عطور جديدة',
-            icon: '📦',
-            image: 'assets/images/portfolio/packaging-1.jpg',
-            client: 'عبق الياسمين للعود والعطور',
-            sector: 'العطور والرفاهية',
-            year: '2024',
-            challenge: 'تصميم تغليف يعكس فخامة العطور.',
-            result: 'ارتفاع المبيعات بنسبة 150%.',
-            testimonial: '"التغليف جعل منتجنا لا يُقاوم."'
+            title: 'إعلان خارجي',
+            category: 'advertising',
+            description: 'لوحة إعلانية خارجية',
+            icon: '🏙️',
+            image: 'assets/images/portfolio/advertising-4.jpg'
         },
         {
             id: 22,
-            title: 'تغليف هدايا زهور الريف',
-            category: 'packaging',
-            description: 'تغليف فاخر للهدايا والزهور',
-            icon: '📦',
-            image: 'assets/images/portfolio/packaging-2.jpg',
-            client: 'متجر زهور الريف',
-            sector: 'التجزئة الإلكترونية',
-            year: '2024',
-            challenge: 'تصميم تغليف يعكس جمال الهدايا.',
-            result: 'ارتفاع مبيعات الهدايا بنسبة 130%.',
-            testimonial: '"التغليف خلق تجربة لا تُنسى لعملائنا."'
+            title: 'تصميم تويتر',
+            category: 'social',
+            description: 'تصاميم جذابة لتغريدات تويتر',
+            icon: '🐦',
+            image: 'assets/images/portfolio/social-4.jpg'
         },
         {
             id: 23,
-            title: 'تغليف مستحضرات الطبيعة للتجميل',
-            category: 'packaging',
-            description: 'تغليف أنيق لمستحضرات تجميل طبيعية',
-            icon: '📦',
-            image: 'assets/images/portfolio/packaging-3.jpg',
-            client: 'مصنع الطبيعة لمستحضرات التجميل',
-            sector: 'مستحضرات التجميل',
-            year: '2023',
-            challenge: 'تصميم تغليف يعكس الطبيعة والنقاء.',
-            result: 'دخول أسواق جديدة وزيادة المبيعات.',
-            testimonial: '"التغليف يعكس تماماً فلسفة منتجاتنا."'
+            title: 'بروشور شركة تقنية',
+            category: 'brochures',
+            description: 'بروشور لشركة تقنية',
+            icon: '💻',
+            image: 'assets/images/portfolio/brochure-4.jpg'
         },
         {
             id: 24,
-            title: 'تغليف مزرعة الريف العضوي',
+            title: 'تغليف طعام',
             category: 'packaging',
-            description: 'تغليف مبتكر لمنتجات غذائية عضوية',
-            icon: '📦',
-            image: 'assets/images/portfolio/packaging-4.jpg',
-            client: 'مزرعة الريف للمنتجات العضوية',
-            sector: 'المنتجات الغذائية',
-            year: '2024',
-            challenge: 'تصميم تغليف يعكس الجودة والطبيعة.',
-            result: 'ارتفاع المبيعات وثقة العملاء.',
-            testimonial: '"التغليف ساعدنا في التميز في سوق المنتجات العضوية."'
+            description: 'تغليف مبتكر لمنتجات غذائية',
+            icon: '🍕',
+            image: 'assets/images/portfolio/packaging-4.jpg'
         }
     ];
 
@@ -433,29 +281,17 @@
     let currentIndex = 0;
 
     // ============================================
-    // GET IMAGE SOURCE
+    // GET IMAGE SOURCE (with fallback to SVG placeholder)
     // ============================================
     function getImageSource(item) {
+        // توليد SVG placeholder كاحتياطي
         const placeholder = generateSVGPlaceholder(item.title, item.category, item.icon || '🎨');
+        
+        // إذا كان هناك مسار صورة، استخدمه، وإلا استخدم placeholder
         if (item.image && item.image !== '') {
             return item.image;
         }
         return placeholder;
-    }
-
-    // ============================================
-    // GET CATEGORY LABEL
-    // ============================================
-    function getCategoryLabel(category) {
-        const labels = {
-            'branding': 'الهوية البصرية',
-            'logos': 'الشعارات',
-            'advertising': 'الإعلانات',
-            'social': 'وسائل التواصل',
-            'brochures': 'البروشورات',
-            'packaging': 'التغليف'
-        };
-        return labels[category] || category;
     }
 
     // ============================================
@@ -488,6 +324,7 @@
             div.setAttribute('data-category', item.category);
             div.setAttribute('data-index', index);
             
+            // الحصول على مصدر الصورة مع fallback
             const imgSrc = getImageSource(item);
             const placeholder = generateSVGPlaceholder(item.title, item.category, item.icon || '🎨');
             
@@ -495,16 +332,11 @@
                 <img src="${imgSrc}" alt="${item.title}" loading="lazy" 
                      onerror="this.onerror=null; this.src='${placeholder}'" />
                 <div class="portfolio-info">
-                    <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:4px;">
-                        <span class="category">${getCategoryLabel(item.category)}</span>
-                        <span class="client-name">${item.client || ''}</span>
-                        ${item.year ? `<span class="project-year">${item.year}</span>` : ''}
-                    </div>
+                    <span class="category">${getCategoryLabel(item.category)}</span>
                     <h4>${item.title}</h4>
                     <p>${item.description}</p>
-                    ${item.result ? `<p style="font-size:0.85rem;color:var(--color-primary-light);"><i class="fas fa-chart-line"></i> ${item.result}</p>` : ''}
                     <button class="btn btn-outline view-project" data-index="${index}">
-                        <i class="fas fa-eye"></i> عرض التفاصيل
+                        <i class="fas fa-eye"></i> عرض المشروع
                     </button>
                 </div>
             `;
@@ -512,7 +344,7 @@
             grid.appendChild(div);
         });
         
-        // Attach click events
+        // Attach click events to view buttons
         grid.querySelectorAll('.view-project').forEach(function(btn) {
             btn.addEventListener('click', function(e) {
                 e.stopPropagation();
@@ -521,6 +353,7 @@
             });
         });
         
+        // Attach click events to items
         grid.querySelectorAll('.portfolio-item').forEach(function(item) {
             item.addEventListener('click', function() {
                 const index = parseInt(this.dataset.index);
@@ -529,6 +362,21 @@
                 }
             });
         });
+    }
+
+    // ============================================
+    // GET CATEGORY LABEL
+    // ============================================
+    function getCategoryLabel(category) {
+        const labels = {
+            'branding': 'الهوية البصرية',
+            'logos': 'الشعارات',
+            'advertising': 'الإعلانات',
+            'social': 'وسائل التواصل',
+            'brochures': 'البروشورات',
+            'packaging': 'التغليف'
+        };
+        return labels[category] || category;
     }
 
     // ============================================
@@ -554,11 +402,7 @@
         
         lightboxCaption.innerHTML = `
             <h4>${item.title}</h4>
-            <p style="color:var(--color-primary-light);">${item.client || ''} ${item.year ? '— ' + item.year : ''}</p>
             <p>${item.description}</p>
-            ${item.challenge ? `<p><strong>التحدي:</strong> ${item.challenge}</p>` : ''}
-            ${item.result ? `<p><strong>النتيجة:</strong> ${item.result}</p>` : ''}
-            ${item.testimonial ? `<p style="font-style:italic;color:var(--color-gray-light);">"${item.testimonial}"</p>` : ''}
             <span class="category">${getCategoryLabel(item.category)}</span>
         `;
         
@@ -570,18 +414,21 @@
 
     function closeLightbox() {
         if (!lightbox) return;
+        
         lightbox.classList.remove('active');
         document.body.style.overflow = '';
     }
 
     function navigateLightbox(direction) {
         if (!currentItems.length) return;
+        
         currentIndex = (currentIndex + direction + currentItems.length) % currentItems.length;
         openLightbox(currentIndex);
     }
 
     function updateLightboxNav() {
         if (!lightboxPrev || !lightboxNext) return;
+        
         lightboxPrev.style.display = currentItems.length > 1 ? 'flex' : 'none';
         lightboxNext.style.display = currentItems.length > 1 ? 'flex' : 'none';
     }
@@ -591,6 +438,7 @@
     // ============================================
     function setFilter(filter) {
         currentFilter = filter;
+        
         filterButtons.forEach(function(btn) {
             btn.classList.remove('active');
             btn.setAttribute('aria-selected', 'false');
@@ -599,15 +447,18 @@
                 btn.setAttribute('aria-selected', 'true');
             }
         });
+        
         renderPortfolio(filter);
     }
 
     // ============================================
     // EVENT LISTENERS
     // ============================================
+    
     filterButtons.forEach(function(btn) {
         btn.addEventListener('click', function() {
-            setFilter(this.dataset.filter);
+            const filter = this.dataset.filter;
+            setFilter(filter);
         });
     });
     
@@ -617,7 +468,9 @@
     
     if (lightbox) {
         lightbox.addEventListener('click', function(e) {
-            if (e.target === this) closeLightbox();
+            if (e.target === this) {
+                closeLightbox();
+            }
         });
     }
     
@@ -637,9 +490,20 @@
     
     document.addEventListener('keydown', function(e) {
         if (!lightbox || !lightbox.classList.contains('active')) return;
-        if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft') { e.preventDefault(); navigateLightbox(-1); }
-        if (e.key === 'ArrowRight') { e.preventDefault(); navigateLightbox(1); }
+        
+        switch(e.key) {
+            case 'Escape':
+                closeLightbox();
+                break;
+            case 'ArrowLeft':
+                e.preventDefault();
+                navigateLightbox(-1);
+                break;
+            case 'ArrowRight':
+                e.preventDefault();
+                navigateLightbox(1);
+                break;
+        }
     });
 
     // ============================================
@@ -659,3 +523,74 @@
     };
 
 })();
+// ============================================
+// RENDER PORTFOLIO - نسخة محسّنة
+// ============================================
+function renderPortfolio(filter = 'all') {
+    if (!grid) return;
+    
+    const filtered = filter === 'all' 
+        ? portfolioData 
+        : portfolioData.filter(item => item.category === filter);
+    
+    currentItems = filtered;
+    
+    if (filtered.length === 0) {
+        grid.innerHTML = `
+            <div class="empty-portfolio">
+                <i class="fas fa-search"></i>
+                <p>لا توجد أعمال في هذا التصنيف</p>
+            </div>
+        `;
+        return;
+    }
+    
+    grid.innerHTML = '';
+    
+    filtered.forEach(function(item, index) {
+        const div = document.createElement('div');
+        div.className = 'portfolio-item';
+        
+        // إضافة كلاس خاص للعناصر المميزة (اختياري)
+        if (index % 3 === 0) {
+            div.classList.add('featured');
+        }
+        
+        div.setAttribute('data-category', item.category);
+        div.setAttribute('data-index', index);
+        
+        const imgSrc = getImageSource(item);
+        const placeholder = generateSVGPlaceholder(item.title, item.category, item.icon || '🎨');
+        
+        div.innerHTML = `
+            <img src="${imgSrc}" alt="${item.title}" loading="lazy" 
+                 onerror="this.onerror=null; this.src='${placeholder}'" />
+            <div class="portfolio-info">
+                <span class="category">${getCategoryLabel(item.category)}</span>
+                <h4>${item.title}</h4>
+                <p>${item.description}</p>
+                <button class="btn btn-outline view-project" data-index="${index}">
+                    <i class="fas fa-eye"></i> عرض المشروع
+                </button>
+            </div>
+        `;
+        
+        grid.appendChild(div);
+    });
+    
+    // أحداث الأزرار
+    grid.querySelectorAll('.view-project').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const index = parseInt(this.dataset.index);
+            openLightbox(index);
+        });
+    });
+    
+    grid.querySelectorAll('.portfolio-item').forEach(function(item) {
+        item.addEventListener('click', function() {
+            const index = parseInt(this.dataset.index);
+            if (!isNaN(index)) openLightbox(index);
+        });
+    });
+}
