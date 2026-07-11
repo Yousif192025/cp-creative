@@ -70,6 +70,7 @@
     // PORTFOLIO DATA - جميع الصور بصيغة JPG
     // ============================================
     const portfolioData = [
+        // ===== BRANDING (1-4) =====
         {
             id: 1,
             title: 'هوية شركة تقنية',
@@ -80,186 +81,196 @@
         },
         {
             id: 2,
-            title: 'شعار علامة تجارية',
+            title: 'هوية علامة تجارية للعود والعطور',
+            category: 'branding',
+            description: 'هوية بصرية تعكس الأصالة والفخامة',
+            icon: '🏢',
+            image: 'assets/images/portfolio/branding-2.jpg'
+        },
+        {
+            id: 3,
+            title: 'هوية وكالة سفر وسياحة',
+            category: 'branding',
+            description: 'هوية بصرية تعكس الثقة والتميز في قطاع السياحة',
+            icon: '🏢',
+            image: 'assets/images/portfolio/branding-3.jpg'
+        },
+        {
+            id: 4,
+            title: 'هوية متجر إلكتروني للزهور والهدايا',
+            category: 'branding',
+            description: 'هوية بصرية جذابة تعكس الطبيعة والجمال',
+            icon: '🏢',
+            image: 'assets/images/portfolio/branding-4.jpg'
+        },
+
+        // ===== LOGOS (5-8) =====
+        {
+            id: 5,
+            title: 'شعار علامة تجارية للعود والعطور',
             category: 'logos',
-            description: 'شعار مميز لعلامة تجارية في مجال الأزياء',
+            description: 'شعار يعكس الفخامة والأصالة في عالم العطور',
             icon: '⭐',
             image: 'assets/images/portfolio/logo-1.jpg'
         },
         {
-            id: 3,
-            title: 'حملة إعلانية رقمية',
+            id: 6,
+            title: 'شعار شركة تقنية',
+            category: 'logos',
+            description: 'شعار يعبر عن الابتكار والريادة في عالم التقنية',
+            icon: '⭐',
+            image: 'assets/images/portfolio/logo-2.jpg'
+        },
+        {
+            id: 7,
+            title: 'شعار نادي رياضي',
+            category: 'logos',
+            description: 'شعار يعكس القوة والتميز في عالم الرياضة',
+            icon: '⭐',
+            image: 'assets/images/portfolio/logo-3.jpg'
+        },
+        {
+            id: 8,
+            title: 'شعار منظمة غير ربحية',
+            category: 'logos',
+            description: 'شعار يعبر عن العطاء والأمل في المجتمع',
+            icon: '⭐',
+            image: 'assets/images/portfolio/logo-4.jpg'
+        },
+
+        // ===== ADVERTISING (9-12) =====
+        {
+            id: 9,
+            title: 'حملة إعلانية لمنتجات الذكاء الاصطناعي',
             category: 'advertising',
-            description: 'إعلانات رقمية مبتكرة لمنتج جديد',
+            description: 'حملة إعلانية رقمية متكاملة لمنتج تقني جديد',
             icon: '📢',
             image: 'assets/images/portfolio/advertising-1.jpg'
         },
         {
-            id: 4,
-            title: 'تصميم وسائل التواصل',
+            id: 10,
+            title: 'إعلان تلفزيوني لوكالة سفر وسياحة',
+            category: 'advertising',
+            description: 'إعلان تلفزيوني يعكس روحانية الحج والعمرة',
+            icon: '📢',
+            image: 'assets/images/portfolio/advertising-2.jpg'
+        },
+        {
+            id: 11,
+            title: 'إعلان مطبوع لعلامة تجارية للعطور',
+            category: 'advertising',
+            description: 'إعلان مطبوع فاخر يستهدف شريحة راقية من العملاء',
+            icon: '📢',
+            image: 'assets/images/portfolio/advertising-3.jpg'
+        },
+        {
+            id: 12,
+            title: 'لوحة إعلانية لمتجر هدايا',
+            category: 'advertising',
+            description: 'لوحة إعلانية خارجية في موقع استراتيجي',
+            icon: '📢',
+            image: 'assets/images/portfolio/advertising-4.jpg'
+        },
+
+        // ===== SOCIAL MEDIA (13-16) =====
+        {
+            id: 13,
+            title: 'حملة إطلاق علامة تجارية للعطور',
             category: 'social',
-            description: 'محتوى بصري لمنصات التواصل الاجتماعي',
+            description: 'حملة إطلاق متكاملة على منصة إنستغرام',
             icon: '📸',
             image: 'assets/images/portfolio/social-1.jpg'
         },
         {
-            id: 5,
-            title: 'بروشور شركة تجارية',
+            id: 14,
+            title: 'محتوى إنستغرام لمتجر الزهور والهدايا',
+            category: 'social',
+            description: 'محتوى بصري جذاب يعكس جمال الزهور والهدايا',
+            icon: '📸',
+            image: 'assets/images/portfolio/social-2.jpg'
+        },
+        {
+            id: 15,
+            title: 'محتوى تفاعلي لنادي رياضي',
+            category: 'social',
+            description: 'محتوى تفاعلي وتحديات رياضية لزيادة التفاعل',
+            icon: '📸',
+            image: 'assets/images/portfolio/social-3.jpg'
+        },
+        {
+            id: 16,
+            title: 'محتوى تويتر لشركة تقنية',
+            category: 'social',
+            description: 'محتوى بصري يعكس الابتكار والتقنية',
+            icon: '📸',
+            image: 'assets/images/portfolio/social-4.jpg'
+        },
+
+        // ===== BROCHURES (17-20) =====
+        {
+            id: 17,
+            title: 'بروشور شركة تقنية',
             category: 'brochures',
-            description: 'بروشور احترافي لشركة تجارية',
+            description: 'بروشور احترافي يعرض الحلول والخدمات التقنية',
             icon: '📄',
             image: 'assets/images/portfolio/brochure-1.jpg'
         },
         {
-            id: 6,
-            title: 'تغليف منتج طبيعي',
+            id: 18,
+            title: 'بروشور سياحي لوكالة سفر',
+            category: 'brochures',
+            description: 'بروشور سياحي غني بالصور والتفاصيل الجذابة',
+            icon: '📄',
+            image: 'assets/images/portfolio/brochure-2.jpg'
+        },
+        {
+            id: 19,
+            title: 'بروشور تسويقي لعلامة تجارية للعطور',
+            category: 'brochures',
+            description: 'بروشور تسويقي فاخر لمجموعة عطور جديدة',
+            icon: '📄',
+            image: 'assets/images/portfolio/brochure-3.jpg'
+        },
+        {
+            id: 20,
+            title: 'بروشور تسويقي للهدايا والمناسبات',
+            category: 'brochures',
+            description: 'بروشور تسويقي للهدايا في المناسبات المختلفة',
+            icon: '📄',
+            image: 'assets/images/portfolio/brochure-4.jpg'
+        },
+
+        // ===== PACKAGING (21-24) =====
+        {
+            id: 21,
+            title: 'تغليف منتجات عطور فاخرة',
             category: 'packaging',
-            description: 'تغليف مبتكر لمنتجات طبيعية',
+            description: 'تغليف فاخر يعكس جودة العطور ورفاهيتها',
             icon: '📦',
             image: 'assets/images/portfolio/packaging-1.jpg'
         },
         {
-            id: 7,
-            title: 'هوية منتج فاخر',
-            category: 'branding',
-            description: 'هوية بصرية متكاملة منتج فاخر',
-            icon: '🍽️',
-            image: 'assets/images/portfolio/branding-2.jpg'
-        },
-        {
-            id: 8,
-            title: 'شعار شركة استثمارية',
-            category: 'logos',
-            description: 'شعار احترافي لشركة استثمارية',
-            icon: '💼',
-            image: 'assets/images/portfolio/logo-2.jpg'
-        },
-        {
-            id: 9,
-            title: 'إعلان تلفزيوني',
-            category: 'advertising',
-            description: 'إعلان تلفزيوني لعلامة تجارية مشهورة',
-            icon: '📺',
-            image: 'assets/images/portfolio/advertising-2.jpg'
-        },
-        {
-            id: 10,
-            title: 'تصميم انستغرام',
-            category: 'social',
-            description: 'تصاميم جذابة لحساب انستغرام',
-            icon: '📱',
-            image: 'assets/images/portfolio/social-2.jpg'
-        },
-        {
-            id: 11,
-            title: 'بروشور سياحي',
-            category: 'brochures',
-            description: 'بروشور سياحي لوجهة عالمية',
-            icon: '✈️',
-            image: 'assets/images/portfolio/brochure-2.jpg'
-        },
-        {
-            id: 12,
-            title: 'تغليف هدايا',
+            id: 22,
+            title: 'تغليف هدايا فاخر',
             category: 'packaging',
-            description: 'تغليف فاخر للهدايا',
-            icon: '🎁',
+            description: 'تغليف مستوحى من الطبيعة يعكس جمال الهدايا',
+            icon: '📦',
             image: 'assets/images/portfolio/packaging-2.jpg'
         },
         {
-            id: 13,
-            title: 'هوية علامة تجارية',
-            category: 'branding',
-            description: 'هوية بصرية متكاملة لعلامة تجارية',
-            icon: '✨',
-            image: 'assets/images/portfolio/branding-3.jpg'
-        },
-        {
-            id: 14,
-            title: 'شعار نادي رياضي',
-            category: 'logos',
-            description: 'شعار مبتكر لنادي رياضي',
-            icon: '⚽',
-            image: 'assets/images/portfolio/logo-3.jpg'
-        },
-        {
-            id: 15,
-            title: 'إعلان مطبوع',
-            category: 'advertising',
-            description: 'إعلان مطبوع في مجلة',
-            icon: '📰',
-            image: 'assets/images/portfolio/advertising-3.jpg'
-        },
-        {
-            id: 16,
-            title: 'تصميم فيسبوك',
-            category: 'social',
-            description: 'تصاميم مميزة لصفحة فيسبوك',
-            icon: '👍',
-            image: 'assets/images/portfolio/social-3.jpg'
-        },
-        {
-            id: 17,
-            title: 'بروشور منتج',
-            category: 'brochures',
-            description: 'بروشور تسويقي لمنتج جديد',
-            icon: '📋',
-            image: 'assets/images/portfolio/brochure-3.jpg'
-        },
-        {
-            id: 18,
-            title: 'تغليف مستحضرات تجميل',
+            id: 23,
+            title: 'تغليف مستحضرات تجميل طبيعية',
             category: 'packaging',
-            description: 'تغليف أنيق لمستحضرات تجميل',
-            icon: '💄',
+            description: 'تغليف أنيق يعكس الطبيعة والنقاء',
+            icon: '📦',
             image: 'assets/images/portfolio/packaging-3.jpg'
         },
         {
-            id: 19,
-            title: 'هوية متجر إلكتروني',
-            category: 'branding',
-            description: 'هوية بصرية لمتجر إلكتروني',
-            icon: '🛒',
-            image: 'assets/images/portfolio/branding-4.jpg'
-        },
-        {
-            id: 20,
-            title: 'شعار منظمة غير ربحية',
-            category: 'logos',
-            description: 'شعار معبر لمنظمة غير ربحية',
-            icon: '🤝',
-            image: 'assets/images/portfolio/logo-4.jpg'
-        },
-        {
-            id: 21,
-            title: 'إعلان خارجي',
-            category: 'advertising',
-            description: 'لوحة إعلانية خارجية',
-            icon: '🏙️',
-            image: 'assets/images/portfolio/advertising-4.jpg'
-        },
-        {
-            id: 22,
-            title: 'تصميم تويتر',
-            category: 'social',
-            description: 'تصاميم جذابة لتغريدات تويتر',
-            icon: '🐦',
-            image: 'assets/images/portfolio/social-4.jpg'
-        },
-        {
-            id: 23,
-            title: 'بروشور شركة تقنية',
-            category: 'brochures',
-            description: 'بروشور لشركة تقنية',
-            icon: '💻',
-            image: 'assets/images/portfolio/brochure-4.jpg'
-        },
-        {
             id: 24,
-            title: 'تغليف طعام',
+            title: 'تغليف منتجات غذائية عضوية',
             category: 'packaging',
-            description: 'تغليف مبتكر لمنتجات غذائية',
-            icon: '🍕',
+            description: 'تغليف صديق للبيئة يعكس الجودة والطبيعة',
+            icon: '📦',
             image: 'assets/images/portfolio/packaging-4.jpg'
         }
     ];
@@ -523,74 +534,3 @@
     };
 
 })();
-// ============================================
-// RENDER PORTFOLIO - نسخة محسّنة
-// ============================================
-function renderPortfolio(filter = 'all') {
-    if (!grid) return;
-    
-    const filtered = filter === 'all' 
-        ? portfolioData 
-        : portfolioData.filter(item => item.category === filter);
-    
-    currentItems = filtered;
-    
-    if (filtered.length === 0) {
-        grid.innerHTML = `
-            <div class="empty-portfolio">
-                <i class="fas fa-search"></i>
-                <p>لا توجد أعمال في هذا التصنيف</p>
-            </div>
-        `;
-        return;
-    }
-    
-    grid.innerHTML = '';
-    
-    filtered.forEach(function(item, index) {
-        const div = document.createElement('div');
-        div.className = 'portfolio-item';
-        
-        // إضافة كلاس خاص للعناصر المميزة (اختياري)
-        if (index % 3 === 0) {
-            div.classList.add('featured');
-        }
-        
-        div.setAttribute('data-category', item.category);
-        div.setAttribute('data-index', index);
-        
-        const imgSrc = getImageSource(item);
-        const placeholder = generateSVGPlaceholder(item.title, item.category, item.icon || '🎨');
-        
-        div.innerHTML = `
-            <img src="${imgSrc}" alt="${item.title}" loading="lazy" 
-                 onerror="this.onerror=null; this.src='${placeholder}'" />
-            <div class="portfolio-info">
-                <span class="category">${getCategoryLabel(item.category)}</span>
-                <h4>${item.title}</h4>
-                <p>${item.description}</p>
-                <button class="btn btn-outline view-project" data-index="${index}">
-                    <i class="fas fa-eye"></i> عرض المشروع
-                </button>
-            </div>
-        `;
-        
-        grid.appendChild(div);
-    });
-    
-    // أحداث الأزرار
-    grid.querySelectorAll('.view-project').forEach(function(btn) {
-        btn.addEventListener('click', function(e) {
-            e.stopPropagation();
-            const index = parseInt(this.dataset.index);
-            openLightbox(index);
-        });
-    });
-    
-    grid.querySelectorAll('.portfolio-item').forEach(function(item) {
-        item.addEventListener('click', function() {
-            const index = parseInt(this.dataset.index);
-            if (!isNaN(index)) openLightbox(index);
-        });
-    });
-}
