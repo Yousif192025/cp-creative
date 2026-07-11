@@ -120,9 +120,9 @@
         },
         {
             id: 7,
-            title: 'هوية مطعم فاخر',
+            title: 'هوية منتج فاخر',
             category: 'branding',
-            description: 'هوية بصرية متكاملة لمطعم فاخر',
+            description: 'هوية بصرية متكاملة منتج فاخر',
             icon: '🍽️',
             image: 'assets/images/portfolio/branding-2.jpg'
         },
