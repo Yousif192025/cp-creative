@@ -1793,3 +1793,221 @@ section {
     opacity: 0.5;
     transition: opacity 0.6s ease;
 }
+/* ============================================
+   FOOTER WATERMARK - CLEAR & DETAILED
+   ============================================ */
+
+/* ===== FOOTER CONTAINER ===== */
+.footer {
+    position: relative;
+    overflow: hidden;
+    background: var(--bg-primary);
+    border-top: 1px solid var(--glass-border);
+    padding: 60px 0 20px;
+}
+
+/* ===== SINGLE WATERMARK - CLEAR & VISIBLE ===== */
+.footer-watermark-single {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+    opacity: 0.15;
+    background: radial-gradient(ellipse at center, rgba(108, 60, 225, 0.05) 0%, transparent 70%);
+}
+
+.watermark-single {
+    width: 65%;
+    max-width: 500px;
+    height: auto;
+    opacity: 0.65;
+    filter: grayscale(0.2) brightness(1.2) drop-shadow(0 0 30px rgba(108, 60, 225, 0.1));
+    transform: rotate(-8deg) scale(1);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ===== HOVER EFFECT ===== */
+.footer:hover .watermark-single {
+    transform: rotate(-5deg) scale(1.08);
+    opacity: 0.85;
+    filter: grayscale(0) brightness(1.4) drop-shadow(0 0 50px rgba(108, 60, 225, 0.2));
+}
+
+/* ===== FOOTER CONTENT (ABOVE WATERMARK) ===== */
+.footer-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================================
+   RESPONSIVE WATERMARK
+   ============================================ */
+
+/* Tablets */
+@media (max-width: 1024px) {
+    .footer-watermark-single {
+        opacity: 0.18;
+    }
+    
+    .watermark-single {
+        width: 70%;
+        max-width: 400px;
+        opacity: 0.6;
+        transform: rotate(-10deg) scale(1.05);
+    }
+    
+    .footer:hover .watermark-single {
+        transform: rotate(-8deg) scale(1.1);
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer-watermark-single {
+        opacity: 0.12;
+        background: radial-gradient(ellipse at center, rgba(108, 60, 225, 0.03) 0%, transparent 60%);
+    }
+    
+    .watermark-single {
+        width: 75%;
+        max-width: 350px;
+        opacity: 0.5;
+        transform: rotate(-12deg) scale(1.1);
+    }
+    
+    .footer:hover .watermark-single {
+        transform: rotate(-10deg) scale(1.15);
+        opacity: 0.7;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    .footer-watermark-single {
+        opacity: 0.1;
+    }
+    
+    .watermark-single {
+        width: 85%;
+        max-width: 280px;
+        opacity: 0.4;
+        transform: rotate(-15deg) scale(1.2);
+    }
+    
+    .footer:hover .watermark-single {
+        transform: rotate(-12deg) scale(1.25);
+        opacity: 0.6;
+    }
+}
+
+/* ============================================
+   ALTERNATIVE: GRID WATERMARK (OPTIONAL)
+   ============================================ */
+   
+/* إذا كنت تفضل الشبكة بدلاً من العلامة الواحدة، استخدم هذا الكود بدلاً من الموجود أعلاه */
+
+/*
+.footer-watermark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    padding: 40px;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.footer-watermark .watermark-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    opacity: 0.5;
+    filter: grayscale(0.2) brightness(1.3);
+    transform: rotate(-5deg) scale(0.9);
+    transition: all 0.6s ease;
+}
+
+.footer-watermark .watermark-image:nth-child(even) {
+    transform: rotate(5deg) scale(0.95);
+}
+
+.footer-watermark .watermark-image:nth-child(3n) {
+    transform: rotate(0deg) scale(1);
+}
+
+.footer:hover .footer-watermark .watermark-image {
+    opacity: 0.7;
+    filter: grayscale(0) brightness(1.5);
+}
+
+@media (max-width: 768px) {
+    .footer-watermark {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 20px;
+        padding: 30px;
+        opacity: 0.08;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-watermark {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 15px;
+        padding: 20px;
+        opacity: 0.06;
+    }
+}
+*/
+
+/* ============================================
+   ANIMATION FOR WATERMARK
+   ============================================ */
+
+@keyframes watermarkPulse {
+    0%, 100% {
+        opacity: 0.65;
+        transform: rotate(-8deg) scale(1);
+    }
+    50% {
+        opacity: 0.75;
+        transform: rotate(-6deg) scale(1.02);
+    }
+}
+
+.footer-watermark-single {
+    animation: watermarkPulse 6s ease-in-out infinite;
+}
+
+/* ============================================
+   ACCESSIBILITY - REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+    .footer-watermark-single {
+        animation: none;
+    }
+    
+    .watermark-single {
+        transition: none;
+    }
+    
+    .footer:hover .watermark-single {
+        transform: none;
+    }
+}
