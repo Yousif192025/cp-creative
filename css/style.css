@@ -1508,3 +1508,48 @@ section {
         gap: 12px;
     }
 }
+/* ===== LOGO STYLES ===== */
+.logo-link {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover {
+    transform: scale(1.02);
+}
+
+.logo-image {
+    height: 50px; /* ضبط الارتفاع حسب حجم الشعار */
+    width: auto;
+    display: block;
+    max-height: 60px;
+    object-fit: contain;
+}
+
+/* شعار الفوتر */
+.footer-logo {
+    height: 45px;
+    max-height: 50px;
+    filter: brightness(0) invert(1); /* إذا كان الشعار داكن ويحتاج لتفتيح */
+    /* أو استخدم الصورة الأصلية بدون فلتر */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .logo-image {
+        height: 40px;
+        max-height: 45px;
+    }
+    
+    .footer-logo {
+        height: 35px;
+        max-height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-image {
+        height: 32px;
+        max-height: 38px;
+    }
+}
