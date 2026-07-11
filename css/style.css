@@ -2011,3 +2011,122 @@ section {
         transform: none;
     }
 }
+/* ============================================
+   NEW SERVICE CARDS STYLES
+   ============================================ */
+
+/* Service Details List */
+.service-details {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 16px;
+    text-align: right;
+    color: var(--color-gray-light);
+    font-size: 0.9rem;
+}
+
+.service-details li {
+    padding: 4px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.service-details li::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--color-primary-light);
+    flex-shrink: 0;
+}
+
+/* Service Meta */
+.service-meta {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin: 12px 0 16px;
+    padding: 10px 0;
+    border-top: 1px solid var(--glass-border);
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.service-meta .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    color: var(--color-gray-light);
+}
+
+.service-meta .meta-item i {
+    color: var(--color-primary-light);
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   STATISTICS - LARGE TYPOGRAPHY
+   ============================================ */
+
+.stat-number {
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: block;
+    line-height: 1.1;
+}
+
+.stat-label {
+    font-size: 1rem;
+    color: var(--color-gray-light);
+    display: block;
+    margin-top: 4px;
+}
+
+/* ============================================
+   CASE STUDY DETAILS IN PORTFOLIO
+   ============================================ */
+
+.portfolio-item .client-name {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: var(--color-primary-light);
+    background: rgba(108, 60, 225, 0.1);
+    padding: 2px 12px;
+    border-radius: 50px;
+    margin-bottom: 4px;
+}
+
+.portfolio-item .project-year {
+    font-size: 0.7rem;
+    color: var(--color-gray-light);
+    margin-right: 8px;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+
+@media (max-width: 768px) {
+    .stat-number {
+        font-size: 2.5rem;
+    }
+    
+    .service-meta {
+        flex-direction: column;
+        gap: 6px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .stat-number {
+        font-size: 2rem;
+    }
+}
