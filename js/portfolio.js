@@ -523,3 +523,74 @@
     };
 
 })();
+// ============================================
+// RENDER PORTFOLIO - نسخة محسّنة
+// ============================================
+function renderPortfolio(filter = 'all') {
+    if (!grid) return;
+    
+    const filtered = filter === 'all' 
+        ? portfolioData 
+        : portfolioData.filter(item => item.category === filter);
+    
+    currentItems = filtered;
+    
+    if (filtered.length === 0) {
+        grid.innerHTML = `
+            <div class="empty-portfolio">
+                <i class="fas fa-search"></i>
+                <p>لا توجد أعمال في هذا التصنيف</p>
+            </div>
+        `;
+        return;
+    }
+    
+    grid.innerHTML = '';
+    
+    filtered.forEach(function(item, index) {
+        const div = document.createElement('div');
+        div.className = 'portfolio-item';
+        
+        // إضافة كلاس خاص للعناصر المميزة (اختياري)
+        if (index % 3 === 0) {
+            div.classList.add('featured');
+        }
+        
+        div.setAttribute('data-category', item.category);
+        div.setAttribute('data-index', index);
+        
+        const imgSrc = getImageSource(item);
+        const placeholder = generateSVGPlaceholder(item.title, item.category, item.icon || '🎨');
+        
+        div.innerHTML = `
+            <img src="${imgSrc}" alt="${item.title}" loading="lazy" 
+                 onerror="this.onerror=null; this.src='${placeholder}'" />
+            <div class="portfolio-info">
+                <span class="category">${getCategoryLabel(item.category)}</span>
+                <h4>${item.title}</h4>
+                <p>${item.description}</p>
+                <button class="btn btn-outline view-project" data-index="${index}">
+                    <i class="fas fa-eye"></i> عرض المشروع
+                </button>
+            </div>
+        `;
+        
+        grid.appendChild(div);
+    });
+    
+    // أحداث الأزرار
+    grid.querySelectorAll('.view-project').forEach(function(btn) {
+        btn.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const index = parseInt(this.dataset.index);
+            openLightbox(index);
+        });
+    });
+    
+    grid.querySelectorAll('.portfolio-item').forEach(function(item) {
+        item.addEventListener('click', function() {
+            const index = parseInt(this.dataset.index);
+            if (!isNaN(index)) openLightbox(index);
+        });
+    });
+}
