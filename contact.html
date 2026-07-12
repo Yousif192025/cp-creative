@@ -8,7 +8,7 @@
     <link rel="canonical" href="https://cp-creative.vercel.app/contact.html" />
     
     <meta property="og:title" content="تواصل معنا | CyberPath Digital" />
-    <meta property="og:description" content="تواصل مع فريق CyberPath Digital للحصول على استشارة مجانية حول خدمات التصميم والهوية البصرية." />
+    <meta property="og:description" content="تواصل مع فريق CyberPath Digital للحصول على استشارة مجانية." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://cp-creative.vercel.app/contact.html" />
     <meta property="og:image" content="https://cp-creative.vercel.app/assets/images/og-default.png" />
@@ -27,14 +27,205 @@
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
+    
+    <style>
+        /* ===== CONTACT PAGE MOBILE FIXES ===== */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        
+        .contact-info-box {
+            background: var(--glass-bg);
+            border-radius: var(--radius-lg);
+            padding: 35px;
+            border: 1px solid var(--glass-border);
+        }
+        
+        .contact-info-box .info-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--glass-border);
+        }
+        
+        .contact-info-box .info-item:last-child {
+            border-bottom: none;
+        }
+        
+        .contact-info-box .info-item i {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--color-primary);
+            border-radius: 50%;
+            color: white;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-info-box .info-item .text {
+            color: var(--color-gray-light);
+            font-size: 0.95rem;
+        }
+        
+        .contact-info-box .info-item .text a {
+            color: var(--color-gray-light);
+            transition: color 0.3s ease;
+        }
+        
+        .contact-info-box .info-item .text a:hover {
+            color: var(--color-white);
+        }
+        
+        .contact-form {
+            background: var(--glass-bg);
+            border-radius: var(--radius-lg);
+            padding: 35px;
+            border: 1px solid var(--glass-border);
+        }
+        
+        .contact-form .form-group {
+            margin-bottom: 18px;
+        }
+        
+        .contact-form .form-group label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .contact-form .form-group input,
+        .contact-form .form-group select,
+        .contact-form .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            background: var(--bg-primary);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-sm);
+            color: var(--color-white);
+            font-size: 1rem;
+            font-family: var(--font-primary);
+            transition: border-color 0.3s ease;
+        }
+        
+        .contact-form .form-group input:focus,
+        .contact-form .form-group select:focus,
+        .contact-form .form-group textarea:focus {
+            outline: none;
+            border-color: var(--color-primary);
+        }
+        
+        .contact-form .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .contact-form .form-group select option {
+            background: var(--bg-primary);
+            color: var(--color-white);
+        }
+        
+        .contact-form .btn-submit {
+            width: 100%;
+            padding: 14px;
+            background: var(--gradient-primary);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .contact-form .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(108, 60, 225, 0.3);
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .contact-info-box,
+            .contact-form {
+                padding: 24px;
+            }
+            
+            .contact-info-box .info-item {
+                padding: 12px 0;
+            }
+            
+            .contact-info-box .info-item i {
+                width: 36px;
+                height: 36px;
+                font-size: 0.85rem;
+            }
+            
+            .contact-info-box .info-item .text {
+                font-size: 0.9rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-info-box,
+            .contact-form {
+                padding: 18px;
+            }
+            
+            .contact-info-box .info-item {
+                gap: 12px;
+                padding: 10px 0;
+            }
+            
+            .contact-info-box .info-item i {
+                width: 32px;
+                height: 32px;
+                font-size: 0.8rem;
+            }
+            
+            .contact-info-box .info-item .text {
+                font-size: 0.85rem;
+            }
+            
+            .contact-form .form-group input,
+            .contact-form .form-group select,
+            .contact-form .form-group textarea {
+                padding: 10px 14px;
+                font-size: 0.9rem;
+            }
+            
+            .contact-form .btn-submit {
+                padding: 12px;
+                font-size: 0.95rem;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- ===== HEADER ===== -->
     <header class="header" role="banner">
         <nav class="navbar container" role="navigation" aria-label="القائمة الرئيسية">
             <div class="logo">
-                <a href="index.html">
-                    <span class="logo-icon">⚡</span>
-                    CyberPath <span class="logo-accent">Digital</span>
+                <a href="index.html" class="logo-link">
+                    <img src="assets/images/cplogo.png" alt="CyberPath Digital" class="logo-image" />
+                    <span class="logo-text">
+                        CyberPath <span class="logo-accent">Digital</span>
+                    </span>
                 </a>
             </div>
             
@@ -53,85 +244,124 @@
     </header>
 
     <main>
-        <section style="padding:140px 0 60px;background:var(--bg-secondary);">
+        <!-- ===== PAGE HEADER ===== -->
+        <section style="padding:120px 0 50px;background:var(--bg-secondary);">
             <div class="container">
-                <h1 class="section-title">تواصل معنا</h1>
-                <p class="section-description" style="max-width:600px;">نحن هنا لمساعدتك، تواصل معنا للحصول على استشارة مجانية</p>
+                <span class="section-tag">تواصل معنا</span>
+                <h1 class="section-title" style="font-size:clamp(2rem, 5vw, 3rem);">نحن هنا لمساعدتك</h1>
+                <p class="section-description" style="max-width:600px;font-size:clamp(1rem, 1.5vw, 1.15rem);">
+                    تواصل معنا للحصول على استشارة مجانية حول مشروعك القادم
+                </p>
             </div>
         </section>
 
-        <section style="padding:60px 0 80px;">
+        <!-- ===== CONTACT SECTION ===== -->
+        <section style="padding:50px 0 80px;">
             <div class="container">
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;">
-                    <div>
-                        <div style="background:var(--glass-bg);border-radius:var(--radius-lg);padding:40px;border:1px solid var(--glass-border);">
-                            <h3>معلومات التواصل</h3>
-                            <ul style="margin-top:24px;display:flex;flex-direction:column;gap:20px;">
-                                <li style="display:flex;align-items:center;gap:16px;color:var(--color-gray-light);">
-                                    <i class="fas fa-phone" style="color:var(--color-primary-light);font-size:1.2rem;"></i>
-                                    <a href="tel:+966501234567" style="color:var(--color-gray-light);">+966561428260</a>
-                                </li>
-                                <li style="display:flex;align-items:center;gap:16px;color:var(--color-gray-light);">
-                                    <i class="fas fa-envelope" style="color:var(--color-primary-light);font-size:1.2rem;"></i>
-                                    <a href="mailto:info@cyberpath.com" style="color:var(--color-gray-light);">info@cyberpath.com</a>
-                                </li>
-                                <li style="display:flex;align-items:center;gap:16px;color:var(--color-gray-light);">
-                                    <i class="fas fa-map-marker-alt" style="color:var(--color-primary-light);font-size:1.2rem;"></i>
-                                    <span>الرياض، المملكة العربية السعودية</span>
-                                </li>
-                            </ul>
-                            
-                            <div style="margin-top:32px;">
-                                <h4>ساعات العمل</h4>
-                                <p style="color:var(--color-gray-light);">الأحد - الخميس: 9:00 ص - 6:00 م</p>
+                <div class="contact-grid">
+                    <!-- معلومات التواصل -->
+                    <div class="contact-info-box">
+                        <h3 style="font-size:clamp(1.2rem, 1.8vw, 1.4rem);margin-bottom:20px;">معلومات التواصل</h3>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="text">
+                                <a href="tel:+966561428260" dir="ltr">‎+966 561428260</a>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="text">
+                                <a href="mailto:info@cyberpath.com">info@cyberpath.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="text">الرياض، المملكة العربية السعودية</div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div class="text">الأحد - الخميس: 9:00 ص - 6:00 م</div>
+                        </div>
+                        
+                        <div style="margin-top:24px;padding-top:20px;border-top:1px solid var(--glass-border);">
+                            <h4 style="font-size:clamp(0.95rem, 1.2vw, 1.05rem);margin-bottom:12px;">تابعنا على</h4>
+                            <div style="display:flex;gap:12px;">
+                                <a href="#" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:50%;color:var(--color-gray-light);transition:all 0.3s ease;">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:50%;color:var(--color-gray-light);transition:all 0.3s ease;">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:50%;color:var(--color-gray-light);transition:all 0.3s ease;">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" style="width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:var(--glass-bg);border:1px solid var(--glass-border);border-radius:50%;color:var(--color-gray-light);transition:all 0.3s ease;">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
                     
-                    <div>
-                        <form id="contactForm" novalidate style="background:var(--glass-bg);border-radius:var(--radius-lg);padding:40px;border:1px solid var(--glass-border);">
-                            <div style="margin-bottom:20px;">
-                                <label for="contact-name" style="display:block;margin-bottom:6px;font-weight:600;">الاسم</label>
-                                <input type="text" id="contact-name" name="name" required style="width:100%;padding:14px 18px;background:var(--bg-primary);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--color-white);font-size:1rem;" placeholder="أدخل اسمك" />
-                            </div>
-                            <div style="margin-bottom:20px;">
-                                <label for="contact-email" style="display:block;margin-bottom:6px;font-weight:600;">البريد الإلكتروني</label>
-                                <input type="email" id="contact-email" name="email" required style="width:100%;padding:14px 18px;background:var(--bg-primary);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--color-white);font-size:1rem;" placeholder="example@email.com" />
-                            </div>
-                            <div style="margin-bottom:20px;">
-                                <label for="contact-subject" style="display:block;margin-bottom:6px;font-weight:600;">الموضوع</label>
-                                <select id="contact-subject" name="subject" style="width:100%;padding:14px 18px;background:var(--bg-primary);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--color-white);font-size:1rem;">
-                                    <option>استشارة تصميم</option>
-                                    <option>طلب عرض سعر</option>
-                                    <option>استفسار عام</option>
-                                </select>
-                            </div>
-                            <div style="margin-bottom:24px;">
-                                <label for="contact-message" style="display:block;margin-bottom:6px;font-weight:600;">الرسالة</label>
-                                <textarea rows="4" id="contact-message" name="message" required style="width:100%;padding:14px 18px;background:var(--bg-primary);border:1px solid var(--glass-border);border-radius:var(--radius-sm);color:var(--color-white);font-size:1rem;resize:vertical;" placeholder="اكتب رسالتك هنا..."></textarea>
-                            </div>
-                            <p id="contactFormStatus" role="status" aria-live="polite" style="display:none;margin-bottom:16px;font-size:0.95rem;"></p>
-                            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;">
-                                <i class="fas fa-paper-plane"></i> إرسال الرسالة
-                            </button>
-                            <p style="margin-top:12px;font-size:0.85rem;color:var(--color-gray-light);text-align:center;">سيتم فتح برنامج البريد الإلكتروني لديك لإرسال الرسالة</p>
-                        </form>
-                        </form>
-                    </div>
+                    <!-- نموذج التواصل -->
+                    <form class="contact-form" onsubmit="event.preventDefault(); alert('شكراً لتواصلك معنا! سنرد عليك قريباً.');">
+                        <h3 style="font-size:clamp(1.2rem, 1.8vw, 1.4rem);margin-bottom:20px;">أرسل رسالتك</h3>
+                        
+                        <div class="form-group">
+                            <label for="name">الاسم</label>
+                            <input type="text" id="name" placeholder="أدخل اسمك" required />
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">البريد الإلكتروني</label>
+                            <input type="email" id="email" placeholder="example@email.com" required />
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">الموضوع</label>
+                            <select id="subject">
+                                <option value="">اختر الموضوع</option>
+                                <option value="consultation">استشارة تصميم</option>
+                                <option value="quote">طلب عرض سعر</option>
+                                <option value="general">استفسار عام</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">الرسالة</label>
+                            <textarea id="message" placeholder="اكتب رسالتك هنا..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i> إرسال الرسالة
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- ===== FOOTER ===== -->
     <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-grid">
+        <div class="footer-watermark-single" aria-hidden="true">
+            <img src="assets/images/cplogo.png" alt="CyberPath Digital" class="watermark-single" />
+        </div>
+        
+        <div class="container footer-content">
+            <div class="footer-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));gap:30px;">
                 <div class="footer-brand">
                     <div class="logo">
-                        <span class="logo-icon">⚡</span>
-                        CyberPath <span class="logo-accent">Digital</span>
+                        <a href="index.html" class="logo-link">
+                            <img src="assets/images/cplogo.png" alt="CyberPath Digital" class="logo-image footer-logo" />
+                            <span class="logo-text" style="font-size:clamp(1rem, 1.2vw, 1.2rem);">
+                                CyberPath <span class="logo-accent">Digital</span>
+                            </span>
+                        </a>
                     </div>
-                    <p>نقدم حلولاً إبداعية في التصميم والهوية البصرية، نساعد العلامات التجارية على التميز والنمو.</p>
+                    <p style="font-size:clamp(0.85rem, 1vw, 0.95rem);">نقدم حلولاً إبداعية في التصميم والهوية البصرية منذ 2004.</p>
                     <div class="social-links">
                         <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
@@ -141,37 +371,37 @@
                 </div>
                 
                 <div class="footer-links">
-                    <h4>خدماتنا</h4>
+                    <h4 style="font-size:clamp(1rem, 1.1vw, 1.1rem);">خدماتنا</h4>
                     <ul>
-                        <li><a href="branding.html">الهوية البصرية</a></li>
-                        <li><a href="branding.html">تصميم الشعارات</a></li>
-                        <li><a href="advertising.html">الإعلانات</a></li>
-                        <li><a href="social-media-design.html">وسائل التواصل</a></li>
+                        <li><a href="branding.html" style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);">الهوية البصرية</a></li>
+                        <li><a href="branding.html" style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);">تصميم الشعارات</a></li>
+                        <li><a href="advertising.html" style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);">الإعلانات</a></li>
+                        <li><a href="social-media-design.html" style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);">وسائل التواصل</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>روابط سريعة</h4>
+                    <h4 style="font-size:clamp(1rem, 1.1vw, 1.1rem);">روابط سريعة</h4>
                     <ul>
-                        <li><a href="about.html">عن الشركة</a></li>
-                        <li><a href="portfolio.html">أعمالنا</a></li>
-                        <li><a href="case-studies.html">دراسات الحالة</a></li>
-                        <li><a href="contact.html">تواصل معنا</a></li>
+                        <li><a href="about.html" style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);">عن الشركة</a></li>
+                        <li><a href="portfolio.html" style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);">أعمالنا</a></li>
+                        <li><a href="case-studies.html" style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);">دراسات الحالة</a></li>
+                        <li><a href="contact.html" style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);">تواصل معنا</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-contact">
-                    <h4>تواصل معنا</h4>
+                    <h4 style="font-size:clamp(1rem, 1.1vw, 1.1rem);">تواصل معنا</h4>
                     <ul>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+966561428260" dir="ltr">‎+966 561428260</a>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@cyberpath.com">info@cyberpath.com</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</li>
+                        <li style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);"><i class="fas fa-phone"></i> <a href="tel:+966561428260" dir="ltr">‎+966 561428260</a></li>
+                        <li style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);"><i class="fas fa-envelope"></i> <a href="mailto:info@cyberpath.com">info@cyberpath.com</a></li>
+                        <li style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);"><i class="fas fa-map-marker-alt"></i> الرياض، السعودية</li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2026 CyberPath Digital. جميع الحقوق محفوظة.</p>
+                <p style="font-size:clamp(0.8rem, 0.9vw, 0.9rem);">&copy; 2026 CyberPath Digital. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
@@ -198,4 +428,3 @@
     </script>
 </body>
 </html>
-
