@@ -285,3 +285,71 @@
     };
 
 })();
+
+// ============================================
+// CUSTOM CURSOR
+// ============================================
+(function() {
+    'use strict';
+
+    // إنشاء عنصر المؤشر
+    const cursor = document.createElement('div');
+    cursor.className = 'custom-cursor';
+    document.body.appendChild(cursor);
+
+    // إنشاء دائرة التتبع
+    const cursorDot = document.createElement('div');
+    cursorDot.className = 'custom-cursor-dot';
+    document.body.appendChild(cursorDot);
+
+    let mouseX = 0, mouseY = 0;
+    let dotX = 0, dotY = 0;
+
+    // تحديث موقع المؤشر
+    document.addEventListener('mousemove', function(e) {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        cursor.style.left = mouseX + 'px';
+        cursor.style.top = mouseY + 'px';
+    });
+
+    // حركة سلسة للدائرة الصغيرة
+    function animateDot() {
+        dotX += (mouseX - dotX) * 0.15;
+        dotY += (mouseY - dotY) * 0.15;
+
+        cursorDot.style.left = dotX + 'px';
+        cursorDot.style.top = dotY + 'px';
+
+        requestAnimationFrame(animateDot);
+    }
+    animateDot();
+
+    // تكبير المؤشر عند المرور فوق الروابط والأزرار
+    const interactiveElements = document.querySelectorAll('a, button, .btn, .filter-btn, .service-card, .portfolio-item, .case-card, .nav-menu a, .logo-link');
+
+    interactiveElements.forEach(function(el) {
+        el.addEventListener('mouseenter', function() {
+            cursor.classList.add('cursor-hover');
+            cursorDot.classList.add('cursor-dot-hover');
+        });
+
+        el.addEventListener('mouseleave', function() {
+            cursor.classList.remove('cursor-hover');
+            cursorDot.classList.remove('cursor-dot-hover');
+        });
+    });
+
+    // إخفاء المؤشر عند مغادرة الصفحة
+    document.addEventListener('mouseleave', function() {
+        cursor.style.opacity = '0';
+        cursorDot.style.opacity = '0';
+    });
+
+    document.addEventListener('mouseenter', function() {
+        cursor.style.opacity = '1';
+        cursorDot.style.opacity = '1';
+    });
+
+})();
