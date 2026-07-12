@@ -27,6 +27,89 @@
     <link rel="stylesheet" href="css/responsive.css" />
     <link rel="manifest" href="manifest.json" />
     <link rel="icon" href="assets/icons/favicon.ico" type="image/x-icon" />
+    
+    <style>
+        /* ===== ABOUT PAGE MOBILE FIXES ===== */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+        
+        .about-values {
+            background: var(--glass-bg);
+            border-radius: var(--radius-lg);
+            padding: 35px;
+            border: 1px solid var(--glass-border);
+        }
+        
+        .about-values .stat-row {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--glass-border);
+            text-align: center;
+        }
+        
+        .about-values .stat-row .stat-item .number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--color-primary-light);
+        }
+        
+        .about-values .stat-row .stat-item .label {
+            font-size: 0.85rem;
+            color: var(--color-gray-light);
+        }
+        
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+            
+            .about-values {
+                padding: 24px;
+            }
+            
+            .about-values .stat-row {
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+            
+            .about-values .stat-row .stat-item {
+                flex: 1 0 40%;
+                min-width: 80px;
+            }
+            
+            .about-values .stat-row .stat-item .number {
+                font-size: 1.6rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .about-values {
+                padding: 18px;
+            }
+            
+            .about-values .stat-row .stat-item {
+                flex: 1 0 30%;
+                min-width: 60px;
+            }
+            
+            .about-values .stat-row .stat-item .number {
+                font-size: 1.3rem;
+            }
+            
+            .about-values .stat-row .stat-item .label {
+                font-size: 0.7rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- ===== HEADER ===== -->
@@ -34,7 +117,7 @@
         <nav class="navbar container" role="navigation" aria-label="القائمة الرئيسية">
             <div class="logo">
                 <a href="index.html" class="logo-link">
-                    <img src="assets/images/cplogo.png" alt="CyberPath Digital - الشعار الرئيسي" class="logo-image" />
+                    <img src="assets/images/cplogo.png" alt="CyberPath Digital" class="logo-image" />
                     <span class="logo-text">
                         CyberPath <span class="logo-accent">Digital</span>
                     </span>
@@ -57,86 +140,85 @@
 
     <main>
         <!-- ===== PAGE HEADER ===== -->
-        <section style="padding:140px 0 60px;background:var(--bg-secondary);">
+        <section style="padding:120px 0 50px;background:var(--bg-secondary);">
             <div class="container">
                 <span class="section-tag">منذ 2004</span>
-                <h1 class="section-title">قصة CyberPath Digital</h1>
-                <p class="section-description" style="max-width:700px;">
-                    نحن وكالة إبداعية متخصصة في التصميم والهوية البصرية، نصنع هويات 
+                <h1 class="section-title" style="font-size:clamp(2rem, 5vw, 3rem);">قصة CyberPath Digital</h1>
+                <p class="section-description" style="max-width:700px;font-size:clamp(1rem, 1.5vw, 1.15rem);">
+                    وكالة إبداعية متخصصة في التصميم والهوية البصرية، نصنع هويات 
                     لعلامات تجارية في السعودية والخليج منذ أكثر من 20 عاماً.
                 </p>
             </div>
         </section>
 
         <!-- ===== ABOUT CONTENT ===== -->
-        <section style="padding:60px 0;">
+        <section style="padding:50px 0;">
             <div class="container">
-                <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start;">
+                <div class="about-grid">
+                    <!-- العمود الأيمن: النصوص -->
                     <div>
-                        <h2>قصة البداية</h2>
-                        <p style="color:var(--color-gray-light);font-size:1.05rem;margin-top:12px;line-height:1.8;">
+                        <h2 style="font-size:clamp(1.3rem, 2.5vw, 1.8rem);">قصة البداية</h2>
+                        <p style="color:var(--color-gray-light);font-size:clamp(0.95rem, 1.2vw, 1.05rem);margin-top:12px;line-height:1.8;">
                             بدأت CyberPath Digital عام 2004 بحلم بسيط: تقديم تصميم احترافي 
                             يفهم السوق المحلي وينافس عالمياً. مع مرور السنوات، أصبحنا نثق به 
                             علامات تجارية في قطاعات متعددة — من التقنية إلى العطور، ومن السفر 
                             إلى التجزئة.
                         </p>
                         
-                        <h2 style="margin-top:32px;">رؤيتنا</h2>
-                        <p style="color:var(--color-gray-light);font-size:1.05rem;margin-top:12px;line-height:1.8;">
+                        <h2 style="font-size:clamp(1.3rem, 2.5vw, 1.8rem);margin-top:28px;">رؤيتنا</h2>
+                        <p style="color:var(--color-gray-light);font-size:clamp(0.95rem, 1.2vw, 1.05rem);margin-top:12px;line-height:1.8;">
                             أن نكون الوكالة الإبداعية الرائدة في المنطقة، نقدم تصاميم مبتكرة 
                             تعزز العلامات التجارية وتخلق تأثيراً دائماً في السوق السعودي والخليجي.
                         </p>
                         
-                        <h2 style="margin-top:32px;">رسالتنا</h2>
-                        <p style="color:var(--color-gray-light);font-size:1.05rem;margin-top:12px;line-height:1.8;">
+                        <h2 style="font-size:clamp(1.3rem, 2.5vw, 1.8rem);margin-top:28px;">رسالتنا</h2>
+                        <p style="color:var(--color-gray-light);font-size:clamp(0.95rem, 1.2vw, 1.05rem);margin-top:12px;line-height:1.8;">
                             نساعد العلامات التجارية على تحقيق أهدافها من خلال تصاميم إبداعية 
                             تعكس هويتها وتوصل رسالتها بفعالية.
                         </p>
                     </div>
                     
-                    <div>
-                        <!-- القيم -->
-                        <div style="background:var(--glass-bg);border-radius:var(--radius-lg);padding:35px;border:1px solid var(--glass-border);">
-                            <div style="text-align:center;">
-                                <i class="fas fa-rocket" style="font-size:3.5rem;color:var(--color-primary-light);"></i>
-                                <h3 style="margin-top:12px;font-size:1.3rem;">قيمنا</h3>
+                    <!-- العمود الأيسر: القيم والإحصائيات -->
+                    <div class="about-values">
+                        <div style="text-align:center;">
+                            <i class="fas fa-rocket" style="font-size:3rem;color:var(--color-primary-light);"></i>
+                            <h3 style="margin-top:10px;font-size:clamp(1.1rem, 1.8vw, 1.3rem);">قيمنا</h3>
+                        </div>
+                        <ul style="list-style:none;padding:0;margin-top:16px;">
+                            <li style="display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--glass-border);">
+                                <span style="color:var(--color-primary-light);font-size:1rem;">✓</span>
+                                <span style="color:var(--color-gray-light);font-size:clamp(0.85rem, 1vw, 0.95rem);">الإبداع والتميز في كل مشروع</span>
+                            </li>
+                            <li style="display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--glass-border);">
+                                <span style="color:var(--color-primary-light);font-size:1rem;">✓</span>
+                                <span style="color:var(--color-gray-light);font-size:clamp(0.85rem, 1vw, 0.95rem);">الجودة والدقة في التنفيذ</span>
+                            </li>
+                            <li style="display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--glass-border);">
+                                <span style="color:var(--color-primary-light);font-size:1rem;">✓</span>
+                                <span style="color:var(--color-gray-light);font-size:clamp(0.85rem, 1vw, 0.95rem);">الالتزام بمواعيد التسليم</span>
+                            </li>
+                            <li style="display:flex;align-items:center;gap:12px;padding:8px 0;border-bottom:1px solid var(--glass-border);">
+                                <span style="color:var(--color-primary-light);font-size:1rem;">✓</span>
+                                <span style="color:var(--color-gray-light);font-size:clamp(0.85rem, 1vw, 0.95rem);">فهم السوق المحلي والثقافة</span>
+                            </li>
+                            <li style="display:flex;align-items:center;gap:12px;padding:8px 0;">
+                                <span style="color:var(--color-primary-light);font-size:1rem;">✓</span>
+                                <span style="color:var(--color-gray-light);font-size:clamp(0.85rem, 1vw, 0.95rem);">رضا العميل هو هدفنا الأول</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="stat-row">
+                            <div class="stat-item">
+                                <span class="number">20+</span>
+                                <span class="label">عاماً من الخبرة</span>
                             </div>
-                            <ul style="list-style:none;padding:0;margin-top:16px;">
-                                <li style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--glass-border);">
-                                    <span style="color:var(--color-primary-light);font-size:1.2rem;">✓</span>
-                                    <span style="color:var(--color-gray-light);">الإبداع والتميز في كل مشروع</span>
-                                </li>
-                                <li style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--glass-border);">
-                                    <span style="color:var(--color-primary-light);font-size:1.2rem;">✓</span>
-                                    <span style="color:var(--color-gray-light);">الجودة والدقة في التنفيذ</span>
-                                </li>
-                                <li style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--glass-border);">
-                                    <span style="color:var(--color-primary-light);font-size:1.2rem;">✓</span>
-                                    <span style="color:var(--color-gray-light);">الالتزام بمواعيد التسليم</span>
-                                </li>
-                                <li style="display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--glass-border);">
-                                    <span style="color:var(--color-primary-light);font-size:1.2rem;">✓</span>
-                                    <span style="color:var(--color-gray-light);">فهم السوق المحلي والثقافة</span>
-                                </li>
-                                <li style="display:flex;align-items:center;gap:12px;padding:10px 0;">
-                                    <span style="color:var(--color-primary-light);font-size:1.2rem;">✓</span>
-                                    <span style="color:var(--color-gray-light);">رضا العميل هو هدفنا الأول</span>
-                                </li>
-                            </ul>
-                            
-                            <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--glass-border);display:flex;justify-content:space-around;text-align:center;">
-                                <div>
-                                    <span style="display:block;font-size:2rem;font-weight:800;color:var(--color-primary-light);">20+</span>
-                                    <span style="color:var(--color-gray-light);font-size:0.85rem;">عاماً من الخبرة</span>
-                                </div>
-                                <div>
-                                    <span style="display:block;font-size:2rem;font-weight:800;color:var(--color-primary-light);">250+</span>
-                                    <span style="color:var(--color-gray-light);font-size:0.85rem;">عميلاً راضياً</span>
-                                </div>
-                                <div>
-                                    <span style="display:block;font-size:2rem;font-weight:800;color:var(--color-primary-light);">7</span>
-                                    <span style="color:var(--color-gray-light);font-size:0.85rem;">قطاعات مختلفة</span>
-                                </div>
+                            <div class="stat-item">
+                                <span class="number">250+</span>
+                                <span class="label">عميلاً راضياً</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="number">7</span>
+                                <span class="label">قطاعات مختلفة</span>
                             </div>
                         </div>
                     </div>
@@ -145,24 +227,24 @@
         </section>
 
         <!-- ===== STATISTICS ===== -->
-        <section style="padding:40px 0 80px;background:var(--bg-secondary);">
+        <section style="padding:30px 0 60px;background:var(--bg-secondary);">
             <div class="container">
-                <div class="stats-grid">
+                <div class="stats-grid" style="grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));gap:20px;">
                     <div style="text-align:center;">
-                        <div class="stat-number" data-count="20">0</div>
-                        <div class="stat-label">عاماً من الخبرة</div>
+                        <div class="stat-number" data-count="20" style="font-size:clamp(2rem, 4vw, 3rem);">0</div>
+                        <div class="stat-label" style="font-size:clamp(0.8rem, 1vw, 0.95rem);">عاماً من الخبرة</div>
                     </div>
                     <div style="text-align:center;">
-                        <div class="stat-number" data-count="250">0</div>
-                        <div class="stat-label">عميلاً راضياً</div>
+                        <div class="stat-number" data-count="250" style="font-size:clamp(2rem, 4vw, 3rem);">0</div>
+                        <div class="stat-label" style="font-size:clamp(0.8rem, 1vw, 0.95rem);">عميلاً راضياً</div>
                     </div>
                     <div style="text-align:center;">
-                        <div class="stat-number" data-count="7">0</div>
-                        <div class="stat-label">قطاعات مختلفة</div>
+                        <div class="stat-number" data-count="7" style="font-size:clamp(2rem, 4vw, 3rem);">0</div>
+                        <div class="stat-label" style="font-size:clamp(0.8rem, 1vw, 0.95rem);">قطاعات مختلفة</div>
                     </div>
                     <div style="text-align:center;">
-                        <div class="stat-number" data-count="98">0</div>
-                        <div class="stat-label">% رضا العملاء</div>
+                        <div class="stat-number" data-count="98" style="font-size:clamp(2rem, 4vw, 3rem);">0</div>
+                        <div class="stat-label" style="font-size:clamp(0.8rem, 1vw, 0.95rem);">% رضا العملاء</div>
                     </div>
                 </div>
             </div>
@@ -172,21 +254,21 @@
     <!-- ===== FOOTER ===== -->
     <footer class="footer" role="contentinfo">
         <div class="footer-watermark-single" aria-hidden="true">
-            <img src="assets/images/cplogo.png" alt="CyberPath Digital Watermark" class="watermark-single" />
+            <img src="assets/images/cplogo.png" alt="CyberPath Digital" class="watermark-single" />
         </div>
         
         <div class="container footer-content">
-            <div class="footer-grid">
+            <div class="footer-grid" style="grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));gap:30px;">
                 <div class="footer-brand">
                     <div class="logo">
                         <a href="index.html" class="logo-link">
                             <img src="assets/images/cplogo.png" alt="CyberPath Digital" class="logo-image footer-logo" />
-                            <span class="logo-text">
+                            <span class="logo-text" style="font-size:clamp(1rem, 1.2vw, 1.2rem);">
                                 CyberPath <span class="logo-accent">Digital</span>
                             </span>
                         </a>
                     </div>
-                    <p>نقدم حلولاً إبداعية في التصميم والهوية البصرية، نساعد العلامات التجارية على التميز والنمو منذ 2004.</p>
+                    <p style="font-size:clamp(0.85rem, 1vw, 0.95rem);">نقدم حلولاً إبداعية في التصميم والهوية البصرية منذ 2004.</p>
                     <div class="social-links">
                         <a href="#" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
@@ -196,38 +278,37 @@
                 </div>
                 
                 <div class="footer-links">
-                    <h4>خدماتنا</h4>
+                    <h4 style="font-size:clamp(1rem, 1.1vw, 1.1rem);">خدماتنا</h4>
                     <ul>
-                        <li><a href="branding.html">الهوية البصرية</a></li>
-                        <li><a href="branding.html">تصميم الشعارات</a></li>
-                        <li><a href="advertising.html">الإعلانات</a></li>
-                        <li><a href="social-media-design.html">وسائل التواصل</a></li>
-                        <li><a href="print-design.html">التصميم الطباعي</a></li>
+                        <li><a href="branding.html" style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);">الهوية البصرية</a></li>
+                        <li><a href="branding.html" style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);">تصميم الشعارات</a></li>
+                        <li><a href="advertising.html" style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);">الإعلانات</a></li>
+                        <li><a href="social-media-design.html" style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);">وسائل التواصل</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>روابط سريعة</h4>
+                    <h4 style="font-size:clamp(1rem, 1.1vw, 1.1rem);">روابط سريعة</h4>
                     <ul>
-                        <li><a href="about.html">عن الشركة</a></li>
-                        <li><a href="portfolio.html">أعمالنا</a></li>
-                        <li><a href="case-studies.html">دراسات الحالة</a></li>
-                        <li><a href="contact.html">تواصل معنا</a></li>
+                        <li><a href="about.html" style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);">عن الشركة</a></li>
+                        <li><a href="portfolio.html" style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);">أعمالنا</a></li>
+                        <li><a href="case-studies.html" style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);">دراسات الحالة</a></li>
+                        <li><a href="contact.html" style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);">تواصل معنا</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-contact">
-                    <h4>تواصل معنا</h4>
+                    <h4 style="font-size:clamp(1rem, 1.1vw, 1.1rem);">تواصل معنا</h4>
                     <ul>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+966561428260" dir="ltr">‎+966 561428260</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@cyberpath.com">info@cyberpath.com</a></li>
-                        <li><i class="fas fa-map-marker-alt"></i> الرياض، المملكة العربية السعودية</li>
+                        <li style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);"><i class="fas fa-phone"></i> <a href="tel:+966561428260" dir="ltr">‎+966 561428260</a></li>
+                        <li style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);"><i class="fas fa-envelope"></i> <a href="mailto:info@cyberpath.com">info@cyberpath.com</a></li>
+                        <li style="font-size:clamp(0.85rem, 0.95vw, 0.95rem);"><i class="fas fa-map-marker-alt"></i> الرياض، السعودية</li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2026 CyberPath Digital. جميع الحقوق محفوظة.</p>
+                <p style="font-size:clamp(0.8rem, 0.9vw, 0.9rem);">&copy; 2026 CyberPath Digital. جميع الحقوق محفوظة.</p>
             </div>
         </div>
     </footer>
@@ -246,16 +327,6 @@
             "name": "CyberPath Digital",
             "foundingDate": "2004"
         }
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "الرئيسية", "item": "https://cp-creative.vercel.app/" },
-            { "@type": "ListItem", "position": 2, "name": "عن الشركة" }
-        ]
     }
     </script>
 </body>
