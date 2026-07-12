@@ -72,105 +72,105 @@
     const portfolioData = [
         {
             id: 1,
-            title: 'هوية شركة تقنية',
+            title: 'هوية شركة تقنية ناشئة',
             category: 'branding',
-            description: 'هوية بصرية متكاملة لشركة تقنية ناشئة',
+            description: 'شعار بمفهوم بصري يجمع بين النمو والتقنية، ضمن نظام هوية متكامل لشركة ناشئة في القطاع الرقمي',
             icon: '🏢',
             image: 'assets/images/portfolio/branding-1.jpg'
         },
         {
             id: 2,
-            title: 'شعار علامة تجارية',
+            title: 'شعار لشركة تصميم وطباعة',
             category: 'logos',
-            description: 'شعار مميز لعلامة تجارية في مجال الأزياء',
+            description: 'شعار بلمسة فنية تعبيرية (بصمة يد ملوّنة) لشركة متخصصة في التصميم والطباعة',
             icon: '⭐',
             image: 'assets/images/portfolio/logo-1.jpg'
         },
         {
             id: 3,
-            title: 'حملة إعلانية رقمية',
+            title: 'حملة إعلانية لوكالة سفر وسياحة',
             category: 'advertising',
-            description: 'إعلانات رقمية مبتكرة لمنتج جديد',
+            description: 'تصميم إعلان لعرض رحلات سياحية وباقات شهر عسل، مع عرض شعارات شركات الطيران الشريكة',
             icon: '📢',
             image: 'assets/images/portfolio/advertising-1.jpg'
         },
         {
             id: 4,
-            title: 'تصميم وسائل التواصل',
+            title: 'تصميم ترويجي لشركة أثاث وديكور',
             category: 'social',
-            description: 'محتوى بصري لمنصات التواصل الاجتماعي',
+            description: 'تصميم بصري يعرض منتجات الأثاث والديكور المنزلي بأسلوب عصري جذاب',
             icon: '📸',
             image: 'assets/images/portfolio/social-1.jpg'
         },
         {
             id: 5,
-            title: 'بروشور شركة تجارية',
+            title: 'بروشور معرض سيارات وآليات ثقيلة',
             category: 'brochures',
-            description: 'بروشور احترافي لشركة تجارية',
+            description: 'تصميم بروشور تعريفي لمعرض متخصص في بيع السيارات والمعدات الثقيلة',
             icon: '📄',
             image: 'assets/images/portfolio/brochure-1.jpg'
         },
         {
             id: 6,
-            title: 'تغليف منتج طبيعي',
+            title: 'تصميم ملصق تعبئة لمنتج غذائي',
             category: 'packaging',
-            description: 'تغليف مبتكر لمنتجات طبيعية',
+            description: 'تصميم ملصق منتج غذائي (ملح مزوّد باليود) بمعايير تعبئة واضحة وثنائية اللغة',
             icon: '📦',
             image: 'assets/images/portfolio/packaging-1.jpg'
         },
         {
             id: 7,
-            title: 'هوية منتج فاخر',
+            title: 'هوية منتج غذائي',
             category: 'branding',
-            description: 'هوية بصرية متكاملة منتج فاخر',
+            description: 'تصميم ملصق وهوية بصرية لمنتج زبدة الفول السوداني بطابع تسويقي جذاب',
             icon: '🍽️',
             image: 'assets/images/portfolio/branding-2.jpg'
         },
         {
             id: 8,
-            title: 'شعار شركة استثمارية',
+            title: 'شعار علامة عطور فاخرة',
             category: 'logos',
-            description: 'شعار احترافي لشركة استثمارية',
+            description: 'شعار بخط عربي كلاسيكي فاخر لعلامة تجارية متخصصة في العطور',
             icon: '💼',
             image: 'assets/images/portfolio/logo-2.jpg'
         },
         {
             id: 9,
-            title: 'إعلان تلفزيوني',
+            title: 'إعلان حجز رحلات بحرية',
             category: 'advertising',
-            description: 'إعلان تلفزيوني لعلامة تجارية مشهورة',
+            description: 'تصميم إعلاني لخدمة حجز تذاكر بواخر سياحية لوكالة سفر وسياحة',
             icon: '📺',
             image: 'assets/images/portfolio/advertising-2.jpg'
         },
         {
             id: 10,
-            title: 'تصميم انستغرام',
+            title: 'منشور سوشيال ميديا لعرض سياحي',
             category: 'social',
-            description: 'تصاميم جذابة لحساب انستغرام',
+            description: 'منشور ترويجي لعرض رحلة سياحية لوكالة سفر وسياحة',
             icon: '📱',
             image: 'assets/images/portfolio/social-2.jpg'
         },
         {
             id: 11,
-            title: 'بروشور سياحي',
+            title: 'بروشور تعريفي لوكالة سفر وسياحة',
             category: 'brochures',
-            description: 'بروشور سياحي لوجهة عالمية',
+            description: 'غلاف بروشور تعريفي بمفهوم بصري عالمي (معالم سياحية وحقيبة سفر) لوكالة سياحة',
             icon: '✈️',
             image: 'assets/images/portfolio/brochure-2.jpg'
         },
         {
             id: 12,
-            title: 'تغليف هدايا',
+            title: 'تغليف هدايا فاخر',
             category: 'packaging',
-            description: 'تغليف فاخر للهدايا',
+            description: 'تغليف هدايا بلمسة أنيقة تجمع بين الألوان الداكنة والتفاصيل الطبيعية',
             icon: '🎁',
             image: 'assets/images/portfolio/packaging-2.jpg'
         },
         {
             id: 13,
-            title: 'هوية علامة تجارية',
+            title: 'هوية شركة معدات زراعية',
             category: 'branding',
-            description: 'هوية بصرية متكاملة لعلامة تجارية',
+            description: 'تصميم مطبوعة تعريفية لشركة جرارات ومعدات زراعية بهوية وطنية واضحة',
             icon: '✨',
             image: 'assets/images/portfolio/branding-3.jpg'
         },
@@ -178,87 +178,87 @@
             id: 14,
             title: 'شعار نادي رياضي',
             category: 'logos',
-            description: 'شعار مبتكر لنادي رياضي',
+            description: 'شعار دائري بعناصر نخيل ودرع رياضي لنادي كرة قدم',
             icon: '⚽',
             image: 'assets/images/portfolio/logo-3.jpg'
         },
         {
             id: 15,
-            title: 'إعلان مطبوع',
+            title: 'إعلان لتطبيق مصرفي',
             category: 'advertising',
-            description: 'إعلان مطبوع في مجلة',
+            description: 'تصميم إعلاني للترويج لتطبيق جوال تابع لمصرف زراعي تجاري',
             icon: '📰',
             image: 'assets/images/portfolio/advertising-3.jpg'
         },
         {
             id: 16,
-            title: 'تصميم فيسبوك',
+            title: 'منشور خدمات صيانة كهرباء',
             category: 'social',
-            description: 'تصاميم مميزة لصفحة فيسبوك',
+            description: 'منشور ترويجي لخدمات صيانة كهربائية منزلية بعمالة مدرّبة',
             icon: '👍',
             image: 'assets/images/portfolio/social-3.jpg'
         },
         {
             id: 17,
-            title: 'بروشور منتج',
+            title: 'تصميم ترويجي لعلامة قهوة',
             category: 'brochures',
-            description: 'بروشور تسويقي لمنتج جديد',
+            description: 'تصميم ترويجي لمنتج بن فاخر بنسبة نقاء عالية، بأسلوب بصري دافئ',
             icon: '📋',
             image: 'assets/images/portfolio/brochure-3.jpg'
         },
         {
             id: 18,
-            title: 'تغليف مستحضرات تجميل',
+            title: 'كيس تسوق لعلامة عطور',
             category: 'packaging',
-            description: 'تغليف أنيق لمستحضرات تجميل',
+            description: 'تصميم كيس تسوّق فاخر بخامة وطباعة ذهبية لعلامة عطور راقية',
             icon: '💄',
             image: 'assets/images/portfolio/packaging-3.jpg'
         },
         {
             id: 19,
-            title: 'هوية متجر إلكتروني',
+            title: 'هوية فاخرة لعلامة عطور',
             category: 'branding',
-            description: 'هوية بصرية لمتجر إلكتروني',
+            description: 'تطبيق شعار العلامة على قطعة معدنية ذهبية بلمسة Premium',
             icon: '🛒',
             image: 'assets/images/portfolio/branding-4.jpg'
         },
         {
             id: 20,
-            title: 'شعار منظمة غير ربحية',
+            title: 'تصميم لوحة مدخل بطابع تراثي',
             category: 'logos',
-            description: 'شعار معبر لمنظمة غير ربحية',
+            description: 'تصميم لوحة مدخل/معلم بطابع محلي تراثي — بحاجة لتأكيدك على نوع الجهة الفعلية',
             icon: '🤝',
             image: 'assets/images/portfolio/logo-4.jpg'
         },
         {
             id: 21,
-            title: 'إعلان خارجي',
+            title: 'إعلان عرض سياحي لوجهة شاطئية',
             category: 'advertising',
-            description: 'لوحة إعلانية خارجية',
+            description: 'إعلان ترويجي لرحلات إلى وجهة شاطئية ضمن باقات شهر العسل لوكالة سفر وسياحة',
             icon: '🏙️',
             image: 'assets/images/portfolio/advertising-4.jpg'
         },
         {
             id: 22,
-            title: 'تصميم تويتر',
+            title: 'منشور خدمات صيانة تكييف',
             category: 'social',
-            description: 'تصاميم جذابة لتغريدات تويتر',
+            description: 'منشور ترويجي لخدمات صيانة أجهزة التكييف بعمالة مدرّبة',
             icon: '🐦',
             image: 'assets/images/portfolio/social-4.jpg'
         },
         {
             id: 23,
-            title: 'بروشور شركة تقنية',
+            title: 'بروشور شركة طاقة شمسية',
             category: 'brochures',
-            description: 'بروشور لشركة تقنية',
+            description: 'تصميم بروشور تعريفي لشركة متخصصة في أنظمة الطاقة الشمسية ومعداتها',
             icon: '💻',
             image: 'assets/images/portfolio/brochure-4.jpg'
         },
         {
             id: 24,
-            title: 'تغليف طعام',
+            title: 'ملصق منتج غذائي (طحينية)',
             category: 'packaging',
-            description: 'تغليف مبتكر لمنتجات غذائية',
+            description: 'ملصق تعبئة لمنتج طحينية بمعلومات تصنيع وتغليف واضحة',
             icon: '🍕',
             image: 'assets/images/portfolio/packaging-4.jpg'
         }
